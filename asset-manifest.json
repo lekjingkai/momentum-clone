@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/momentum-clone/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/momentum-clone/static/js/main.4f3b2ad4.chunk.js",
-    "main.js.map": "/momentum-clone/static/js/main.4f3b2ad4.chunk.js.map",
-    "runtime-main.js": "/momentum-clone/static/js/runtime-main.877e71a7.js",
-    "runtime-main.js.map": "/momentum-clone/static/js/runtime-main.877e71a7.js.map",
-    "static/js/2.ec3be641.chunk.js": "/momentum-clone/static/js/2.ec3be641.chunk.js",
-    "static/js/2.ec3be641.chunk.js.map": "/momentum-clone/static/js/2.ec3be641.chunk.js.map",
-    "static/js/3.056855f6.chunk.js": "/momentum-clone/static/js/3.056855f6.chunk.js",
-    "static/js/3.056855f6.chunk.js.map": "/momentum-clone/static/js/3.056855f6.chunk.js.map",
+    "main.css": "/momentum-clone/static/css/main.6f27b77c.chunk.css",
+    "main.js": "/momentum-clone/static/js/main.5f9ac1ae.chunk.js",
+    "main.js.map": "/momentum-clone/static/js/main.5f9ac1ae.chunk.js.map",
+    "runtime-main.js": "/momentum-clone/static/js/runtime-main.e247e56f.js",
+    "runtime-main.js.map": "/momentum-clone/static/js/runtime-main.e247e56f.js.map",
+    "static/js/2.d09b01dd.chunk.js": "/momentum-clone/static/js/2.d09b01dd.chunk.js",
+    "static/js/2.d09b01dd.chunk.js.map": "/momentum-clone/static/js/2.d09b01dd.chunk.js.map",
+    "static/js/3.8934be73.chunk.js": "/momentum-clone/static/js/3.8934be73.chunk.js",
+    "static/js/3.8934be73.chunk.js.map": "/momentum-clone/static/js/3.8934be73.chunk.js.map",
     "index.html": "/momentum-clone/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/momentum-clone/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.ec3be641.chunk.js.LICENSE.txt": "/momentum-clone/static/js/2.ec3be641.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/momentum-clone/static/media/logo.6ce24c58.svg"
+    "static/css/main.6f27b77c.chunk.css.map": "/momentum-clone/static/css/main.6f27b77c.chunk.css.map",
+    "static/js/2.d09b01dd.chunk.js.LICENSE.txt": "/momentum-clone/static/js/2.d09b01dd.chunk.js.LICENSE.txt",
+    "static/media/pexels-palu-malerba-2426546.03fd9f00.jpg": "/momentum-clone/static/media/pexels-palu-malerba-2426546.03fd9f00.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.877e71a7.js",
-    "static/js/2.ec3be641.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.4f3b2ad4.chunk.js"
+    "static/js/runtime-main.e247e56f.js",
+    "static/js/2.d09b01dd.chunk.js",
+    "static/css/main.6f27b77c.chunk.css",
+    "static/js/main.5f9ac1ae.chunk.js"
   ]
 }
