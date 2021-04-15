@@ -1,0 +1,42 @@
+.mainFocusContainer{
+    margin-top: 50px;
+}
+
+.mainFocusContainer p{
+    font-size: 40px;
+}
+
+.mainFocusContainer input{
+    font-size: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    transition: 0.3s;
+    text-align: center;
+
+}
+
+.todayGoalContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.checkbox{
+margin: 0 10px;
+}
+
+.cancelBtn{
+    margin: 0 10px;
+    padding: 8px 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    transition: 0.3s;
+}
+
+.cancelBtn:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
