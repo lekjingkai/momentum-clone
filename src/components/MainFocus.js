@@ -2,60 +2,89 @@ import React from "react";
 import "../styles/MainFocus.css";
 import { useState, useEffect } from "react";
 
-import { animated, useTransition } from "react-spring";
-
-const MainFocus = (props) => {
+const MainFocus = () => {
   const [title, setTitle] = useState("");
   const [todayGoal, setTodayGoal] = useState(false);
-  // const [selected, setSelected] = useState(0)
   const [selected, setSelected] = useState(false);
+  const [fade, setFade] = useState(false);
+  const [fadeGoalHover, setFadeGoalHover] = useState(false);
+
+  const [disableInput, setDisableInput] = useState(false);
+
+  const fadeDuration = 600;
 
   const changeDiv = () => {
-    setSelected((state) => !state);
+    setDisableInput(!disableInput);
+    setFade(!fade);
+    setTimeout(() => {
+      setSelected(!selected);
+      setTodayGoal(false);
+
+    }, fadeDuration);
   };
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      // setSelected(state => !state)
 
       if (title != "") {
-        setSelected(!selected);
+        setDisableInput(!disableInput);
+        setFade(!fade);
+        setTimeout(() => {
+          setSelected(!selected);
+        }, fadeDuration);
       }
     }
   };
 
-  //   const transitions = useTransition(props.active, null, {
-  //     from: { position: "absolute", opacity: 0 },
-  //     enter: { opacity: 1 },
-  //     leave: { opacity: 0 }
-  //   });
+  const clearGoal = () => {
+    setTodayGoal(!todayGoal);
+  };
+
 
   return (
     <div className="mainFocusContainer">
-      {/* <button onClick={() => setSelected(0)}>btn for hi</button>
-         <button onClick={() => setSelected(1)}>btn for hi2</button>
-         {(selected === 0) && <p>hi</p>}
-            {(selected === 1) && <p>hi2</p>} */}
-      {/* <button onClick={() => setSelected(state => !state)}>btn for hi</button> */}
-      {/* {(selected === false) && <p>hi</p>}
-            {(selected === true) && <p>hi3</p>} */}
       {selected === false && (
-        <div>
+        <div className={`${fade ? "fadeOutAnim" : "fadeInAnim"}`}>
           <p>What is your focus for today?</p>
           <input
             onChange={(event) => setTitle(event.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyPress={handleKeyPress} disabled={disableInput}
           ></input>
         </div>
       )}
       {selected === true && (
-        <div>
-          <p>Today's goal</p>
+        <div
+          className={`${fade ? "fadeInAnim" : "fadeOutAnim"}`}
+          onMouseOver={() => setFadeGoalHover(true)}
+          onMouseOut={() => setFadeGoalHover(false)}
+        >
+          <p>Today's Goal</p>
           <div className="todayGoalContainer">
-          <input className="checkbox" type="checkbox"></input>
-          <p>{title}</p>
-          <button className="cancelBtn" onClick={changeDiv}><i className="fa fa-times"></i></button>
+            <label
+              className={`checkmarkContainer ${
+                fadeGoalHover ? "fadeIn" : "fadeOut"
+              }`}
+            >
+              <input type="checkbox" onClick={clearGoal} />
+              <span class="checkmark"></span>
+            </label>
+            <p
+              className={`goalText ${todayGoal ? "strikethroughGoalText" : ""}`}
+            >
+              {title}
+            </p>
+            <button
+              className={`cancelBtn ${todayGoal ? "rotate" : ""} ${
+                fadeGoalHover ? "fadeIn" : "fadeOut"
+              }`}
+              onClick={changeDiv}
+            >
+              <i className="fa fa-times icon"></i>
+            </button>
           </div>
+          <p className={`goalSuccessText ${todayGoal ? "fadeInOutAnim" : ""}`}>
+            Nicely done!
+          </p>
         </div>
       )}
     </div>
