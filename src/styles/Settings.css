@@ -1,0 +1,9 @@
+.settingContainer{
+    display: flex;
+    align-items: center;
+}
+
+.setting{
+font-size: 25px;
+margin: 0px 10px;
+}

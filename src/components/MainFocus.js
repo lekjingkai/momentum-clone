@@ -19,13 +19,11 @@ const MainFocus = () => {
     setTimeout(() => {
       setSelected(!selected);
       setTodayGoal(false);
-
     }, fadeDuration);
   };
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-
       if (title != "") {
         setDisableInput(!disableInput);
         setFade(!fade);
@@ -40,15 +38,15 @@ const MainFocus = () => {
     setTodayGoal(!todayGoal);
   };
 
-
   return (
     <div className="mainFocusContainer">
       {selected === false && (
         <div className={`${fade ? "fadeOutAnim" : "fadeInAnim"}`}>
-          <p>What is your focus for today?</p>
+          <p>What is your main focus for today?</p>
           <input
             onChange={(event) => setTitle(event.target.value)}
-            onKeyPress={handleKeyPress} disabled={disableInput}
+            onKeyPress={handleKeyPress}
+            disabled={disableInput}
           ></input>
         </div>
       )}

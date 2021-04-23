@@ -1,0 +1,36 @@
+.bottom-row{
+    display: flex;
+    position:absolute;
+    flex-direction: row;
+    bottom:0px;
+    width: 100%;
+    /* height: 60px; */
+}
+
+
+
+.bottom-left{
+width: 20%;
+background-color: rosybrown;
+display: flex;
+}
+
+.bottom-center{
+    width: 60%;
+    background-color: pink;
+}
+
+.bottom-right{
+    width: 20%;
+    background-color:royalblue;
+}
+
+@media screen and (max-width: 600px) {
+    .bottom-row {     flex-direction: column; }
+    .bottom-center { order: 1;
+        width: 100%; }
+    .bottom-right { order: 2; 
+        width: 100%; }
+    .bottom-left { order: 3;
+        width: 100%; }
+}

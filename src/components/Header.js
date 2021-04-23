@@ -5,6 +5,8 @@ import testimage from "../assets/pexels-palu-malerba-2426546.jpg";
 import Clock from './Clock'
 import MainTitle from './MainTitle'
 import MainFocus from './MainFocus'
+import Quote from './Quote'
+import Bottom from './Bottom'
 
 //Photo by Palu Malerba from Pexels
 //https://www.pexels.com/@palumalerba?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
@@ -36,6 +38,7 @@ const Header = () => {
 <MainFocus></MainFocus>
       </div>
 
+      <Bottom></Bottom>
     </div>
   );
 };
