@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/momentum-clone/static/css/main.f95db3cc.chunk.css",
-    "main.js": "/momentum-clone/static/js/main.dc767495.chunk.js",
-    "main.js.map": "/momentum-clone/static/js/main.dc767495.chunk.js.map",
+    "main.css": "/momentum-clone/static/css/main.69ffef18.chunk.css",
+    "main.js": "/momentum-clone/static/js/main.e5e06000.chunk.js",
+    "main.js.map": "/momentum-clone/static/js/main.e5e06000.chunk.js.map",
     "runtime-main.js": "/momentum-clone/static/js/runtime-main.eed17ebb.js",
     "runtime-main.js.map": "/momentum-clone/static/js/runtime-main.eed17ebb.js.map",
     "static/js/2.3f4ab553.chunk.js": "/momentum-clone/static/js/2.3f4ab553.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.8b0a8719.chunk.js": "/momentum-clone/static/js/3.8b0a8719.chunk.js",
     "static/js/3.8b0a8719.chunk.js.map": "/momentum-clone/static/js/3.8b0a8719.chunk.js.map",
     "index.html": "/momentum-clone/index.html",
-    "static/css/main.f95db3cc.chunk.css.map": "/momentum-clone/static/css/main.f95db3cc.chunk.css.map",
+    "static/css/main.69ffef18.chunk.css.map": "/momentum-clone/static/css/main.69ffef18.chunk.css.map",
     "static/js/2.3f4ab553.chunk.js.LICENSE.txt": "/momentum-clone/static/js/2.3f4ab553.chunk.js.LICENSE.txt",
     "static/media/pexels-palu-malerba-2426546.03fd9f00.jpg": "/momentum-clone/static/media/pexels-palu-malerba-2426546.03fd9f00.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.eed17ebb.js",
     "static/js/2.3f4ab553.chunk.js",
-    "static/css/main.f95db3cc.chunk.css",
-    "static/js/main.dc767495.chunk.js"
+    "static/css/main.69ffef18.chunk.css",
+    "static/js/main.e5e06000.chunk.js"
   ]
 }
