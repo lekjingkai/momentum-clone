@@ -3,14 +3,24 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
 }
 
 .quoteContainer {
   position: absolute;
-  display: inline-block;
+  /* display: inline-block; */
   bottom: 0;
   z-index: 1;
 
+}
+
+.quoteBlock{
+  width: 60%;
+  /* background-color: brown; */
+}
+
+.authorBlock{
+  transform: translate(-50%);
 }
 
 .hoverQuote {
@@ -25,7 +35,8 @@ align-items: center;
 }
 
 .slideUp {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  transform: translateY(-10px);
 }
 
 .author {
@@ -34,22 +45,40 @@ align-items: center;
   margin-bottom: 0px;
   opacity: 0;
   visibility: hidden;
-  transform: translate(-50%);
+  /* transform: translate(-50%); */
 }
 
 .slideDownFadeIn {
-  margin-bottom: -5px;
+  /* margin-bottom: -5px; */
+  transform: translateY(5px);
   opacity: 1;
   visibility: visible;
 
 }
 
+.spinLoading {
+  font-size: 20px;
+  animation: rotationSetting 4s infinite linear;
+  position: absolute;
+  /* display: inline-block; */
+  bottom: 10px;
+}
+
+
+
+@keyframes rotationSetting {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 
 @media screen and (max-width: 600px) {
 
     .quoteContainer {
         position: relative;
-        background-color: cyan;
       }
 
       .hoverQuote {
@@ -57,12 +86,26 @@ align-items: center;
       }
 
       .slideUp {
-        margin-bottom: 0px;
+        transform: none;
+      }
+
+      .slideDownFadeIn {
+        transform: none;
       }
 
       .author{
-          transform: none;
+          /* transform: none; */
           opacity: 1;
           visibility: visible;
+      }
+
+      .quoteBlock{
+        width: 100%;
+        /* background-color: brown; */
+      }
+
+      .authorBlock{
+        transform: none;
+                /* background-color: brown; */
       }
 }

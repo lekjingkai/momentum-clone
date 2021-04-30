@@ -1,5 +1,4 @@
 .BGCreditsContainer{
-    background-color: red;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -18,3 +17,5 @@ padding-top: 5px;
     font-size: 12px;
 padding-top: 5px;
     }
+
+

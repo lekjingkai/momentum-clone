@@ -11,18 +11,16 @@
 
 .bottom-left{
 width: 20%;
-background-color: rosybrown;
 display: flex;
 }
 
 .bottom-center{
     width: 60%;
-    background-color: pink;
 }
 
 .bottom-right{
     width: 20%;
-    background-color:royalblue;
+    display: flex;
 }
 
 @media screen and (max-width: 600px) {

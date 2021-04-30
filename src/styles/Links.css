@@ -1,0 +1,16 @@
+.linksContainer{
+    display: flex;
+    align-items: center;
+}
+
+.links{
+    margin: 0px 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.links:hover{
+    opacity: 1;
+}
+
