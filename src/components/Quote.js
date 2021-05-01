@@ -18,13 +18,13 @@ const Quote = () => {
       const res = await fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
               "method": "GET",
               "headers": {
-                "x-rapidapi-key": "b60c6af483mshe2b0b094ffe5148p10ed1cjsn21883faa5b8d",
+                "x-rapidapi-key": process.env.REACT_APP_RAPID_KEY,
                 "x-rapidapi-host": "quotes15.p.rapidapi.com"
               }
             })
               setQuoteLoading(false);
       const data = await res.json()
-  
+
   
       // console.log(data)
       return data
@@ -38,7 +38,6 @@ const Quote = () => {
   
       getQuotes()
     }, [])
-
 
   return (
     <div >
@@ -54,7 +53,6 @@ const Quote = () => {
           <p className={`quote ${hoverQuote ? "slideUp" : ""} ${quoteLoading ? "" : "fadeInAnim"} `} >
 
           {quoteLoading === false && <p >"{quoteData && quoteData.content}"</p>}
-            
           </p>
         </div>
       </div>
