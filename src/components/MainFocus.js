@@ -2,8 +2,11 @@ import React from "react";
 import "../styles/MainFocus.css";
 import { useState, useEffect } from "react";
 
+
+
 const MainFocus = () => {
-  const [title, setTitle] = useState("");
+  // const [title, setTitle] = useState("");
+  const [title, setTitle] = useState(localStorage.getItem('todaygoal'));
   const [todayGoal, setTodayGoal] = useState(false);
   const [selected, setSelected] = useState(false);
   const [fade, setFade] = useState(false);
@@ -13,12 +16,16 @@ const MainFocus = () => {
 
   const fadeDuration = 600;
 
+
+
   const changeDiv = () => {
     setDisableInput(!disableInput);
     setFade(!fade);
+    // localStorage.setItem('todaygoal', '')
     setTimeout(() => {
       setSelected(!selected);
       setTodayGoal(false);
+
     }, fadeDuration);
   };
 
@@ -38,13 +45,30 @@ const MainFocus = () => {
     setTodayGoal(!todayGoal);
   };
 
+  const setGoal = (e) => {
+    setTitle(e)
+    localStorage.setItem('todaygoal', title);
+  };
+
+  // useEffect(() => {
+  //   localStorage.setItem('todaygoal', title);
+  //     }, [title]);
+
+
+// useEffect(() => {
+//   if(localStorage.getItem('todaygoal') != ''){
+//     setSelected(true)
+//   }
+//     });
+
+
   return (
     <div className="mainFocusContainer">
       {selected === false && (
         <div className={`${fade ? "fadeOutAnim" : "fadeInAnim"}`}>
           <p>What is your main focus for today?</p>
           <input
-            onChange={(event) => setTitle(event.target.value)}
+            onChange={(event) => setGoal(event.target.value)}
             onKeyPress={handleKeyPress}
             disabled={disableInput}
           ></input>

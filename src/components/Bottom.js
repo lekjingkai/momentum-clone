@@ -5,13 +5,14 @@ import BGCredits from './BGCredits'
 import Todo from './Todo'
 import '../styles/Bottom.css'
 
-const Bottom = () => {
+const Bottom = (props) => {
     return (
         <div className="bottom-row">
 
                   <div className="bottom-left">
                       <Settings></Settings>
-                      <BGCredits></BGCredits>
+                      {/* <BGCredits></BGCredits> */}
+                      {props.children}
                   </div>
                   <div className="bottom-center">
                   <Quote></Quote>

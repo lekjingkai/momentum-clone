@@ -7,6 +7,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  /* text-shadow: 0 1px 0 black; */
 }
 
 .middleContent {
@@ -18,8 +19,18 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.65), transparent);
+  transition: 0.5s;
+  /* background: linear-gradient(to right, rgba(255, 0, 0, 0.65), transparent); */
+   /* background: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.3) 100%); */
+   /* background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 10%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.25) 30%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.25) 70%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.25) 90%, rgba(0,0,0,0.5) 100%); */
+   /* background: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0.1) 80%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.3) 100%); */
+/* background:     linear-gradient(90deg,
+  rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0.3)
+) */
+background: rgba(0, 0, 0, 0.2);
 }
+
 
 .header{
   color: white;
@@ -38,6 +49,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  transition: 0.3s;
 }
 
 .mainHeader {

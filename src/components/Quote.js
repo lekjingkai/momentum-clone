@@ -50,8 +50,9 @@ const Quote = () => {
           onMouseOut={() => setHoverQuote(false)}
         >
 {quoteLoading === true && <p><i class="fa fa-spinner spinLoading" aria-hidden="true"></i></p>}
-          <p className={`quote ${hoverQuote ? "slideUp" : ""} ${quoteLoading ? "" : "fadeInAnim"} `} >
-
+          <p className={`quote ${hoverQuote ? "slideUp" : ""} ${quoteLoading ? "" : "fadeInAnim"} `} 
+          
+          >
           {quoteLoading === false && <p >"{quoteData && quoteData.content}"</p>}
           </p>
         </div>
@@ -63,11 +64,12 @@ const Quote = () => {
             onMouseOver={() => setHoverQuote(true)}
             onMouseOut={() => setHoverQuote(false)}
           >
-            <p className={`author ${hoverQuote ? "slideDownFadeIn" : ""}`}>
+            <div className={`author ${hoverQuote ? "slideDownFadeIn" : ""} ${quoteLoading ? "notLoaded" : ""}`}>
             {/* {console.log(quoteData.originator)} */}
-            {quoteData && quoteData.originator && quoteData.originator.name}
-            {/* {Object.keys(quoteData.originator.name).length !== 0 ? (quoteData.originator.name) : ('No Tasks To Show')} */}
-            </p>
+            {/* {quoteData && quoteData.originator && quoteData.originator.name} <a href={quoteData.url}><i class="fa fa-external-link QuoteAuthorLink" aria-hidden="true"></i></a> */}
+
+<span className={`${hoverQuote ? "TextSlideDownFadeIn" : ""}`}>{quoteData && quoteData.originator && quoteData.originator.name}</span> <a href={quoteData.url}><i class={`fa fa-external-link ${hoverQuote ? "TextSlideDownFadeIn" : ""}`} aria-hidden="true"></i></a>
+            </div>
           </div>
         </div>
       </div>

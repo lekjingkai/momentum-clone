@@ -1,0 +1,101 @@
+.speech-bubble {
+	position: absolute;
+	background: white;
+	border-radius: .4em;
+
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	/* bottom: 0; */
+	/* left: 75%; */
+	width: 0;
+	height: 0;
+	border: 7px solid transparent;
+	/* border-top-color: white; */
+	/* border-bottom: 0;
+	margin-left: -7px;
+	margin-bottom: -7px; */
+}
+
+.bottom-speech-bubble {
+    bottom: 55px;
+}
+
+.bottom-speech-bubble:after {
+	bottom: 0;
+	/* left: 75%; */
+    border-top-color: white;
+	border-bottom: 0;
+	margin-left: -7px;
+	margin-bottom: -7px;
+}
+
+.top-speech-bubble:after {
+	top: 0;
+	/* left: 50%; */
+    border-bottom-color: white;
+	border-top: 0;
+	margin-left: -7px;
+	margin-top: -7px;
+}
+
+.todo-bubble {
+    /* bottom: 40px; */
+    padding: 10px;
+    right: 10px;
+    visibility: none;
+    opacity: 0;
+    width: 100px;
+    transition: 0.2s;
+}
+
+.todo-bubble::after {
+    left: 75%;
+}
+
+.setting-bubble {
+    /* bottom: 40px; */
+    padding: 10px;
+    left: 10px;
+    visibility: none;
+    opacity: 0;
+    width: 100px;
+    transition: 0.2s;
+}
+
+.setting-bubble::after {
+    left: 20%;
+}
+
+.link-bubble {
+    top: 40px;
+    padding: 10px;
+    left: 10px;
+    visibility: none;
+    opacity: 0;
+    width: 100px;
+    transition: 0.2s;
+}
+
+.link-bubble::after {
+    left: 40%;
+}
+
+.speech-bubble-text{
+    color: black;
+    text-shadow: none;
+}
+
+.speech-bubble-show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 65px;
+}
+
+.top-bubble-show {
+    visibility: visible;
+    opacity: 1;
+    top: 65px;
+}

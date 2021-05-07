@@ -1,3 +1,5 @@
+
+
 .BGCreditsContainer{
     text-align: left;
     display: flex;
@@ -6,16 +8,32 @@
     padding-bottom: 5px;
 }
 
+
 .BGtitle{
 width: 100%;
 font-size: 15px;
 padding-top: 5px;
 }
 
-.BGauthor{
+.BGauthorContainer{
     width: 100%;
     font-size: 12px;
 padding-top: 5px;
+
     }
+
+
+
+
+
+    .BGauthorLink{
+text-decoration: none;
+opacity: 0.7;
+transition: 0.3s;
+        }
+
+        .BGauthorLink:hover{
+            opacity: 1;
+                }
 
 
