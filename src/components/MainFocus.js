@@ -6,7 +6,27 @@ import { useState, useEffect } from "react";
 
 const MainFocus = () => {
   // const [title, setTitle] = useState("");
-  const [title, setTitle] = useState(localStorage.getItem('todaygoal'));
+  // if(localStorage.getItem('todaygoal') === null){
+  //   const test2 = ''
+  // }
+  // else{
+  //   const test2 = JSON.parse(localStorage.getItem('todaygoal'))
+  //   const ggg = test2.goal
+  // }
+
+  const checkLSGoal = (e) => {
+  if(e === null){
+    return ''
+  }
+  else{
+    const test2 = JSON.parse(e)
+    return(test2.goal)
+  }
+  }
+
+  // const test2 = JSON.parse(localStorage.getItem('todaygoal'))
+  // const ggg = test2.goal
+  const [title, setTitle] = useState(checkLSGoal(localStorage.getItem('todaygoal')));
   const [todayGoal, setTodayGoal] = useState(false);
   const [selected, setSelected] = useState(false);
   const [fade, setFade] = useState(false);
@@ -16,12 +36,27 @@ const MainFocus = () => {
 
   const fadeDuration = 600;
 
+  useEffect(() => {
+    // localStorage.setItem('todaygoal', title);
+    if(checkLSGoal(localStorage.getItem('todaygoal')) !== ''){
+      if(JSON.parse(localStorage.getItem('todaygoal')).cleared == false){
+        setDisableInput(!disableInput);
+        setFade(!fade);
+        setTimeout(() => {
+          setSelected(!selected);
+        }, fadeDuration);
+      }
+    }
 
+      }, []);
+
+      
 
   const changeDiv = () => {
     setDisableInput(!disableInput);
     setFade(!fade);
     // localStorage.setItem('todaygoal', '')
+    localStorage.removeItem('todaygoal')
     setTimeout(() => {
       setSelected(!selected);
       setTodayGoal(false);
@@ -29,11 +64,20 @@ const MainFocus = () => {
     }, fadeDuration);
   };
 
+  //on enter, changes the input into the task
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       if (title != "") {
         setDisableInput(!disableInput);
         setFade(!fade);
+        const todayGoal2 = {
+          goal: title,
+          cleared: false,
+      }
+      // alert(new Date())
+      localStorage.setItem('todaygoal', JSON.stringify(todayGoal2));
+// console.log(localStorage.getItem('todaygoal'))
+
         setTimeout(() => {
           setSelected(!selected);
         }, fadeDuration);
@@ -43,12 +87,20 @@ const MainFocus = () => {
 
   const clearGoal = () => {
     setTodayGoal(!todayGoal);
+    const boolClear = JSON.parse(localStorage.getItem('todaygoal')).cleared 
+    const todayGoal2 = {
+      goal: title,
+      cleared: !boolClear,
+  }
+  localStorage.setItem('todaygoal', JSON.stringify(todayGoal2));
+  // console.log(localStorage.getItem('todaygoal'))
   };
 
-  const setGoal = (e) => {
-    setTitle(e)
-    localStorage.setItem('todaygoal', title);
-  };
+  // const setGoal = (e) => {
+  //   setTitle(e)
+  //   localStorage.setItem('todaygoal', title);
+  //   console.log(localStorage.getItem('todaygoal'))
+  // };
 
   // useEffect(() => {
   //   localStorage.setItem('todaygoal', title);
@@ -60,7 +112,7 @@ const MainFocus = () => {
 //     setSelected(true)
 //   }
 //     });
-
+console.log(localStorage.getItem('todaygoal'))
 
   return (
     <div className="mainFocusContainer">
@@ -68,7 +120,7 @@ const MainFocus = () => {
         <div className={`${fade ? "fadeOutAnim" : "fadeInAnim"}`}>
           <p>What is your main focus for today?</p>
           <input
-            onChange={(event) => setGoal(event.target.value)}
+            onChange={(event) => setTitle(event.target.value)}
             onKeyPress={handleKeyPress}
             disabled={disableInput}
           ></input>
