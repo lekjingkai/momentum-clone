@@ -1,4 +1,5 @@
 .clock{
     font-size: 10em;
 margin: 0;
+user-select: none; 
 }

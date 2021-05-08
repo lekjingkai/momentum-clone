@@ -29,7 +29,7 @@ const Header = () => {
 
   const query = 'abstract';
 
-  const queryArray = ['landscape','nature%20wallpaper','beach'];
+  const queryArray = ['ocean%20wallpaper','nature%20wallpaper','sky%20wallpaper','beach'];
   const colorArray = ['green','turquoise','blue','orange'];
 
   function random_item(items)

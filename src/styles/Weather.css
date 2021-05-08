@@ -1,0 +1,17 @@
+.weatherContainer{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    flex-direction: column;
+}
+
+.weatherText{
+    margin: 0px 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.weatherText:hover{
+    opacity: 1;
+}

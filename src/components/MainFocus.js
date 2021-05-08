@@ -38,6 +38,8 @@ const MainFocus = () => {
 
   useEffect(() => {
     // localStorage.setItem('todaygoal', title);
+
+    //change to localStorage.getItem('todaygoal') !== null
     if(checkLSGoal(localStorage.getItem('todaygoal')) !== ''){
       if(JSON.parse(localStorage.getItem('todaygoal')).cleared == false){
         setDisableInput(!disableInput);

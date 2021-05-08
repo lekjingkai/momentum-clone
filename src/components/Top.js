@@ -6,6 +6,7 @@ import Todo from './Todo'
 import Search from './Search'
 import '../styles/Top.css'
 import Links from './Links'
+import Weather from './Weather'
 
 const Top = () => {
     return (
@@ -22,6 +23,7 @@ const Top = () => {
                   </div>
                   <div className="top-right">
                       {/* <Todo></Todo> */}
+                      <Weather></Weather>
                   </div>
 
         </div>
