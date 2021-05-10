@@ -26,7 +26,7 @@ const Search = () => {
     }
 
     return (
-        <div>
+        <div className="searchContainer">
     {/* <form onSubmit={handleSubmit} className="searchForm"> */}
     <form onSubmit={handleSubmit} className={`searchForm ${searchFocus ? "searchFormFocus" : ""}`}
                           onMouseOver={() => setSearchHover(true)}

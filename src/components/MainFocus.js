@@ -114,7 +114,7 @@ const MainFocus = () => {
 //     setSelected(true)
 //   }
 //     });
-console.log(localStorage.getItem('todaygoal'))
+// console.log(localStorage.getItem('todaygoal'))
 
   return (
     <div className="mainFocusContainer">
