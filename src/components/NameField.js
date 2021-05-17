@@ -1,14 +1,25 @@
 import React from "react";
 import "../styles/NameField.css";
-
+import { useState, useEffect } from "react";
 
 
 const NameField = (props) => {
+  const [nameBlank, setNameBlank] = useState(false);
+
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       return props.blur();
     }
   };
+
+  useEffect(() => {
+if(props.value === ''){
+  setNameBlank(true)
+}else{
+  setNameBlank(false)
+}
+  }, [props.value]);
+
 
 
   return (
@@ -24,7 +35,7 @@ const NameField = (props) => {
           className="nameInput"
         />
       ) : (
-        <div onDoubleClick={props.doubleClick} className="nameText">
+        <div onDoubleClick={props.doubleClick} className={`nameText ${nameBlank ? "nameText-blank" : ""}`}>
           {props.value}
         </div>
       )}

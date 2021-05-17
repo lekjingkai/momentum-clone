@@ -2,7 +2,7 @@
 	position: absolute;
 	background: white;
 	border-radius: .4em;
-
+z-index: 99;
 }
 
 .speech-bubble:after {
@@ -17,6 +17,7 @@
 	/* border-bottom: 0;
 	margin-left: -7px;
 	margin-bottom: -7px; */
+    
 }
 
 .bottom-speech-bubble {
@@ -47,12 +48,12 @@
     right: 10px;
     visibility: none;
     opacity: 0;
-    width: 100px;
+    width: 300px;
     transition: 0.2s;
 }
 
 .todo-bubble::after {
-    left: 75%;
+    left: 90%;
 }
 
 .setting-bubble {

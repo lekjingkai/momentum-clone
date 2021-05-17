@@ -18,6 +18,11 @@ transition: all 0.1s linear;
     transition: 0.3s;
 }
 
+.setting-bubble-content{
+  color:black;
+  text-shadow: none;
+}
+
 .settingIcon:hover{  
     opacity: 1;
 }

@@ -1,17 +1,16 @@
 .headerContainer {
-  display: inline-block;
+  /* display: inline-block; */
   text-align: center;
   padding: 20px 20px 20px 20px;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   width: 100%;
   /* text-shadow: 0 1px 0 black; */
 }
 
 .middleContent {
-  transform: translate(-50%, 20%);
+  transform: translateY(20%);
   height: 300px;
 }
 
@@ -50,6 +49,7 @@ background: rgba(0, 0, 0, 0.2);
   background-repeat: no-repeat;
   background-attachment: fixed;
   transition: 0.3s;
+  background-color: black;
 }
 
 .mainHeader {
@@ -118,9 +118,10 @@ background-color: white;
 
 @media screen and (max-width: 600px) {
   .headerContainer {
-    text-align: center;
+    top: 200px;
       }
 
+      
   .mainHeader {
     font-size: 33px;
   }

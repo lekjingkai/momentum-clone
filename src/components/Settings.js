@@ -45,7 +45,9 @@ const Settings = () => {
                 <i class="fa fa-cog settingIcon" aria-hidden="true"></i>
                 </p>
                 {showSetting === true && (
-                <TextBubble todoTextBubble={`speech-bubble bottom-speech-bubble setting-bubble ${showSettingBubble ? "speech-bubble-show" : ""}`}></TextBubble>
+                <TextBubble todoTextBubble={`speech-bubble bottom-speech-bubble setting-bubble ${showSettingBubble ? "speech-bubble-show" : ""}`}>
+                  <p className="setting-bubble-content">In Progress</p>
+                </TextBubble>
       )}
                 {/* <TextBubble todoTextBubble={`speech-bubble setting-bubble ${showSettingBubble ? "speech-bubble-show" : ""}`}></TextBubble> */}
         </div>

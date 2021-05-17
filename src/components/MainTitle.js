@@ -49,7 +49,7 @@ const MainTitle = () => {
             inputChange = {(e) => changeName(e.target.value)}
                doubleClick = {() => setFirstNameInput(true)}
                blur = {() => setFirstNameInput(false)}
-               active = {firstNameInput}><p style={{fontSize:"50px"}}>{greeting},&nbsp;</p></NameField>
+               active = {firstNameInput}><p className="greetingText">{greeting},&nbsp;</p></NameField>
         </div>
     )
 }

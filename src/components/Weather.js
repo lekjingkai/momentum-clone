@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/Weather.css'
 import { useState, useEffect } from "react";
-import testimage from "./assets/01d.png";
 
 const Weather = () => {
     const [location, setLocation] = useState('');
@@ -129,7 +128,7 @@ const Weather = () => {
 
       // weatherData && console.log(weatherData);
       const kelvinToFarenheit = (k) => {
-        return (k - 273.15).toFixed(2);
+        return Math.round((k - 273.15).toFixed(2));
       };
 
 
@@ -151,7 +150,7 @@ const Weather = () => {
                       />
             )}
             {weatherData.main && (
-              <h2>{kelvinToFarenheit(weatherData.main.temp)}&deg; C</h2>
+              <h2 className="temp">{kelvinToFarenheit(weatherData.main.temp)}&deg; C</h2>
             )}
 
 

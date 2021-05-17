@@ -29,7 +29,7 @@ const Header = () => {
 
   const query = 'abstract';
 
-  const queryArray = ['ocean%20wallpaper','nature%20wallpaper','sky%20wallpaper','beach'];
+  const queryArray = ['ocean','forest','beach','mountain','frozen','outdoors','clouds','night%20sky','space','universe'];
   const colorArray = ['green','turquoise','blue','orange'];
 
   function random_item(items)
@@ -42,7 +42,7 @@ return items[Math.floor(Math.random()*items.length)];
       //fetch tasks
       const fetchImage = async () => {
         // const res = await fetch("https://pexelsdimasv1.p.rapidapi.com/v1/search?query=nature&per_page=100&page=1", {
-          const res = await fetch(`https://pexelsdimasv1.p.rapidapi.com/v1/search?query=${random_item(queryArray)}&per_page=20&orientation=landscape&color=${random_item(colorArray)}`, {
+          const res = await fetch(`https://pexelsdimasv1.p.rapidapi.com/v1/search?query=${random_item(queryArray)}&per_page=20&orientation=landscape`, {
           "method": "GET",
           "headers": {
             "authorization": process.env.REACT_APP_PEXELS_KEY,
@@ -95,7 +95,7 @@ return items[Math.floor(Math.random()*items.length)];
         // className="image2"
         className={`image2 ${imageLoading ? "" : "fadeInAnim"}`}
         // style={{ backgroundImage: `url(${test})` }}
-        style={{ backgroundImage: `url(${imageData.photos[randomImageCount].src.original})` }}
+        style={{ backgroundImage: `url(${imageData.photos[randomImageCount].src.large2x})` }}
           >
             {/* {console.log("test 2 = " + imageCount)} */}
             {/* {imageData && imageData.photos && console.log(imageData.photos.length)} */}

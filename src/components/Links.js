@@ -36,7 +36,9 @@ const Links = () => {
         <div className="linksContainer">
             <p ref={ref} className="links"                       onClick={changeDiv}><i class="fa fa-link" aria-hidden="true"></i> Links</p>
             {/* {showSetting === true && ( */}
-                <TextBubble todoTextBubble={`speech-bubble top-speech-bubble link-bubble ${showSettingBubble ? "top-bubble-show" : ""}`}></TextBubble>
+                <TextBubble todoTextBubble={`speech-bubble top-speech-bubble link-bubble ${showSettingBubble ? "top-bubble-show" : ""}`}>
+                <p className="links-bubble-content">In Progress</p>
+                </TextBubble>
       {/* )} */}
         </div>
     )
