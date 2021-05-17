@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/momentum-clone/static/css/main.15385b3e.chunk.css",
+    "main.css": "/momentum-clone/static/css/main.a1c26c0a.chunk.css",
     "main.js": "/momentum-clone/static/js/main.a0ea44c7.chunk.js",
     "main.js.map": "/momentum-clone/static/js/main.a0ea44c7.chunk.js.map",
     "runtime-main.js": "/momentum-clone/static/js/runtime-main.7fce0515.js",
@@ -10,14 +10,14 @@
     "static/js/3.765bcc74.chunk.js": "/momentum-clone/static/js/3.765bcc74.chunk.js",
     "static/js/3.765bcc74.chunk.js.map": "/momentum-clone/static/js/3.765bcc74.chunk.js.map",
     "index.html": "/momentum-clone/index.html",
-    "static/css/main.15385b3e.chunk.css.map": "/momentum-clone/static/css/main.15385b3e.chunk.css.map",
+    "static/css/main.a1c26c0a.chunk.css.map": "/momentum-clone/static/css/main.a1c26c0a.chunk.css.map",
     "static/js/2.a9b51f3c.chunk.js.LICENSE.txt": "/momentum-clone/static/js/2.a9b51f3c.chunk.js.LICENSE.txt",
     "static/media/pexels-palu-malerba-2426546.03fd9f00.jpg": "/momentum-clone/static/media/pexels-palu-malerba-2426546.03fd9f00.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7fce0515.js",
     "static/js/2.a9b51f3c.chunk.js",
-    "static/css/main.15385b3e.chunk.css",
+    "static/css/main.a1c26c0a.chunk.css",
     "static/js/main.a0ea44c7.chunk.js"
   ]
 }
