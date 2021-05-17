@@ -138,7 +138,7 @@ const MainFocus = () => {
           <div className="todayGoalContainer">
             <label
               className={`checkmarkContainer ${
-                fadeGoalHover ? "fadeIn" : "fadeOut"
+                fadeGoalHover ? "fadeIn" : ""
               }`}
             >
               <input type="checkbox" onClick={clearGoal} />
@@ -151,12 +151,13 @@ const MainFocus = () => {
             </p>
             <button
               className={`cancelBtn ${todayGoal ? "rotate" : ""} ${
-                fadeGoalHover ? "fadeIn" : "fadeOut"
+                fadeGoalHover ? "fadeIn" : ""
               }`}
               onClick={changeDiv}
             >
               <i className="fa fa-times icon"></i>
             </button>
+
           </div>
           <p className={`goalSuccessText ${todayGoal ? "fadeInOutAnim" : ""}`}>
             Nicely done!

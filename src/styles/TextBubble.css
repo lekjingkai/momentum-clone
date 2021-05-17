@@ -2,7 +2,7 @@
 	position: absolute;
 	background: white;
 	border-radius: .4em;
-z-index: 99;
+z-index: -1;
 }
 
 .speech-bubble:after {
@@ -93,10 +93,12 @@ z-index: 99;
     visibility: visible;
     opacity: 1;
     bottom: 65px;
+    z-index: 99;
 }
 
 .top-bubble-show {
     visibility: visible;
     opacity: 1;
     top: 65px;
+    z-index: 99;
 }

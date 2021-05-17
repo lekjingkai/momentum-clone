@@ -1,8 +1,16 @@
+
+
 .searchForm{
-    vertical-align: middle;
+    /* vertical-align: middle; */
     border-bottom: 2px solid transparent;
 transition: 0.3s;
 cursor: pointer;
+/* text-align: left; */
+display: flex;
+flex-direction: column;
+/* align-content: center;
+justify-content: left; */
+
 }
 
 .searchForm:hover{
@@ -45,3 +53,14 @@ opacity: 1;
 cursor:text;
 }
 
+@media screen and (max-width: 600px) {
+    .searchContainer{
+        width: 70%;
+    }
+
+    .searchInput{
+        width: 70%;
+    }
+    
+
+}

@@ -11,6 +11,7 @@
   border-bottom: 2px solid white;
   transition: 0.3s;
   text-align: center;
+  border-radius: 0;
 }
 
 .todayGoalContainer {
@@ -33,6 +34,8 @@
   cursor: pointer;
   /* visibility: none;
     opacity: 0; */
+    visibility: none;
+    opacity: 0;
 }
 
 .rotate {
@@ -58,6 +61,8 @@
   user-select: none;
   margin-top: -23px;
   transition: 0.3s;
+  visibility: none;
+  opacity: 0;
 }
 
 /* Hide the browser's default checkbox */
@@ -201,6 +206,11 @@
 @media screen and (max-width: 600px) {
   .mainFocusContainer,.mainFocusContainer input {
     font-size: 20px;
+  }
+
+  .cancelBtn,.checkmarkContainer{
+    visibility: visible;
+    opacity: 1;
   }
   
 }

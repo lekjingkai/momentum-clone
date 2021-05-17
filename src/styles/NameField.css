@@ -42,5 +42,13 @@ flex-wrap: wrap;
     .nameInput, .nameText, .greetingText{
         font-size: 30px;
     }
+
+    .nameInput{
+    width: 100px;
+    }
+
+    .nameText-blank{
+        min-width: 100px;
+    }
     
   }

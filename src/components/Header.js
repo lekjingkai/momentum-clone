@@ -84,7 +84,7 @@ return items[Math.floor(Math.random()*items.length)];
       // imageData && imageData.photos && setImageCount(Math.floor(Math.random() * imageData.photos.length-1))
   
   return (
-    <div>
+    <div className="wholeContainer">
 {imageData &&
 <div>
       {/* <div className="gradient"></div> */}

@@ -1,11 +1,12 @@
 .top-row{
     display: flex;
     position:absolute;
-    flex-direction: row;
+    /* flex-direction: row; */
     top:0px;
     width: 100%;
 padding-top: 10px;
     /* height: 60px; */
+    flex-wrap: wrap;
 }
 
 
@@ -22,10 +23,12 @@ display: flex;
 
 
 @media screen and (max-width: 600px) {
-    .top-row {     flex-direction: column; }
+    /* .top-row {     flex-direction: column; } */
     .top-left { order: 1;
         width: 100%; }
     .top-right { order: 2; 
-        width: 100%; }
+        width: 100%;
+        justify-content: center;
+    margin-top: 10px;}
 
 }

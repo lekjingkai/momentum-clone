@@ -125,6 +125,10 @@ align-items: center;
         transform: none;
       }
 
+      .quote{
+font-size: 12px;
+      }
+
       .author{
           /* transform: none; */
           opacity: 1;
@@ -132,7 +136,7 @@ align-items: center;
       }
 
       .quoteBlock{
-        width: 100%;
+        max-width: 100%;
         /* background-color: brown; */
       }
 
