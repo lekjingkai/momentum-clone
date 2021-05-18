@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/momentum-clone/static/css/main.d353a6b7.chunk.css",
+    "main.css": "/momentum-clone/static/css/main.dedf5d52.chunk.css",
     "main.js": "/momentum-clone/static/js/main.8a99b8b3.chunk.js",
     "main.js.map": "/momentum-clone/static/js/main.8a99b8b3.chunk.js.map",
     "runtime-main.js": "/momentum-clone/static/js/runtime-main.7fce0515.js",
@@ -10,13 +10,13 @@
     "static/js/3.765bcc74.chunk.js": "/momentum-clone/static/js/3.765bcc74.chunk.js",
     "static/js/3.765bcc74.chunk.js.map": "/momentum-clone/static/js/3.765bcc74.chunk.js.map",
     "index.html": "/momentum-clone/index.html",
-    "static/css/main.d353a6b7.chunk.css.map": "/momentum-clone/static/css/main.d353a6b7.chunk.css.map",
+    "static/css/main.dedf5d52.chunk.css.map": "/momentum-clone/static/css/main.dedf5d52.chunk.css.map",
     "static/js/2.64ca5636.chunk.js.LICENSE.txt": "/momentum-clone/static/js/2.64ca5636.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7fce0515.js",
     "static/js/2.64ca5636.chunk.js",
-    "static/css/main.d353a6b7.chunk.css",
+    "static/css/main.dedf5d52.chunk.css",
     "static/js/main.8a99b8b3.chunk.js"
   ]
 }
