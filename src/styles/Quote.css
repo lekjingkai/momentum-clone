@@ -48,6 +48,14 @@ align-items: center;
   opacity: 0;
   visibility: hidden;
   /* transform: translate(-50%); */
+  display: flex;
+  align-items: center;
+
+
+}
+
+.author i {
+margin-left: 5px;
 
 
 }

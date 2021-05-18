@@ -8,7 +8,14 @@ import MainFocus from './MainFocus'
 import Quote from './Quote'
 import Bottom from './Bottom'
 import Top from './Top'
+import Settings from './Settings'
 import BGCredits from './BGCredits'
+import Todo from './Todo'
+import Search from './Search'
+
+import Links from './Links'
+import Weather from './Weather'
+
 import { useState, useEffect } from "react";
 // import gg from 'https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg'
 //563492ad6f91700001000001eb0bf777570041b38dd2e09f22d3ee56 api key
@@ -82,53 +89,70 @@ return items[Math.floor(Math.random()*items.length)];
       // imageData && imageData.photos && console.log(imageData.photos.length)
       
       // imageData && imageData.photos && setImageCount(Math.floor(Math.random() * imageData.photos.length-1))
+
+      const leftBottomComponent = (
+        <span style={{ display: "flex", width: "100%" }}>
+          <Settings></Settings>
+          {imageData &&
+            imageData.photos &&
+            imageData.photos[randomImageCount] && (
+              <BGCredits
+                author={imageData.photos[randomImageCount].photographer}
+                authorUrl={imageData.photos[randomImageCount].photographer_url}
+                url={imageData.photos[randomImageCount].url}
+              ></BGCredits>
+            )}
+        </span>
+      );
+
+      const centerBottomComponent = (<Quote/>);
+
+      const rightBottomComponent = (<Todo/>);
+
+      const leftTopComponent = (
+        <span style={{ display: "flex", width: "100%" }}>
+                      <Links></Links>
+                      <Search></Search>
+      </span>
+      )
+
+      const rightTopComponent = <Weather/>
+
+
+
   
   return (
     <div className="wholeContainer">
-{imageData &&
-<div>
-      {/* <div className="gradient"></div> */}
-      {imageLoading === false && <div className={`gradient`}></div>}
-      {imageData && imageData.photos && imageData.photos[randomImageCount] && imageData.photos[randomImageCount].src &&
-      
-      <div
-        // className="image2"
-        className={`image2 ${imageLoading ? "" : "fadeInAnim"}`}
-        // style={{ backgroundImage: `url(${test})` }}
-        style={{ backgroundImage: `url(${imageData.photos[randomImageCount].src.large2x})` }}
-          >
-            {/* {console.log("test 2 = " + imageCount)} */}
-            {/* {imageData && imageData.photos && console.log(imageData.photos.length)} */}
-            {/* {imageData && imageData.photos && imageData.photos[randomImageCount] && imageData.photos[randomImageCount].src && console.log(imageData.photos[randomImageCount].src.large2x)} */}
-            {/* {imageData && imageData.photos && imageData.photos[Math.floor(Math.random() * imageData.photos.length-1)].src && console.log(imageData.photos[Math.floor(Math.random() * imageData.photos.length-1)].src.original) } */}
-            {/* {imageData && imageData.photos && console.log("test " + imageCount)} */}
+      {imageData && (
+        <div>
+          {imageLoading === false && <div className={`gradient`}></div>}
+          {imageData &&
+            imageData.photos &&
+            imageData.photos[randomImageCount] &&
+            imageData.photos[randomImageCount].src && (
+              <div
+                className={`image2 ${imageLoading ? "" : "fadeInAnim"}`}
+                style={{
+                  backgroundImage: `url(${imageData.photos[randomImageCount].src.large2x})`,
+                }}
+              >
+              </div>
+            )}
+          <Top left={leftTopComponent} right={rightTopComponent}/>
+          <div className="headerContainer">
+            <Clock />
           </div>
-
-      
-          }
-      <Top></Top>
-      <div className="headerContainer">
-        {/* <h1 className="header mainHeader">Explore Singapore</h1>
-        <h2 className="header subHeader">Experience the Little Red Dot </h2>
-        <p className="header headerText">
-        A small dynamic, urban city full of culture, just waiting to be explored.
-        </p>
-        <button onClick={handleSectionClick} className="header-btn">Get Started</button> */}
-              <Clock/>
-
-      </div>
-      <div className="headerContainer middleContent">
-      <MainTitle></MainTitle>
-<MainFocus></MainFocus>
-      </div>
-
-      <Bottom>
-        {imageData && imageData.photos && imageData.photos[randomImageCount] &&
-      <BGCredits author={imageData.photos[randomImageCount].photographer} authorUrl={imageData.photos[randomImageCount].photographer_url} url={imageData.photos[randomImageCount].url}></BGCredits>
-    }
-      </Bottom>
-      </div>
-}
+          <div className="headerContainer middleContent">
+            <MainTitle />
+            <MainFocus />
+          </div>
+          <Bottom
+            left={leftBottomComponent}
+            center={centerBottomComponent}
+            right={rightBottomComponent}
+          />
+        </div>
+      )}
     </div>
   );
 };

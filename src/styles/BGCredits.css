@@ -1,39 +1,35 @@
-
-
-.BGCreditsContainer{
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5px;
+.BGCreditsContainer {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px;
 }
 
-
-.BGtitle{
-width: 100%;
-font-size: 15px;
-padding-top: 5px;
+.BGCreditsContainer p {
+  width: 100%;
+  font-size: 15px;
+  padding-top: 5px;
 }
 
-.BGauthorContainer{
-    width: 100%;
-    font-size: 12px;
-padding-top: 5px;
+.BGauthorContainer {
+  width: 100%;
+  font-size: 12px;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+}
 
-    }
+.BGauthorContainer a i {
+  margin-left: 5px;
+}
 
+.BGauthorContainer a {
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.3s;
+}
 
-
-
-
-    .BGauthorLink{
-text-decoration: none;
-opacity: 0.7;
-transition: 0.3s;
-        }
-
-        .BGauthorLink:hover{
-            opacity: 1;
-                }
-
-
+.BGauthorContainer a:hover {
+  opacity: 1;
+}

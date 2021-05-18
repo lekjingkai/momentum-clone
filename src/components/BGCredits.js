@@ -1,24 +1,27 @@
-import React from 'react'
-import '../styles/BGCredits.css'
+import React from "react";
+import "../styles/BGCredits.css";
 import PropTypes from "prop-types";
 
 const BGCredits = (props) => {
-    return (
-        <div className="settingContainer">
-        <div className="BGCreditsContainer">
-            <p className="BGtitle">Photo by</p>
-            {/* <p className="BGauthor">{props.author}</p> */}
-            <div className="BGauthorContainer"><a className="BGauthorLink" href={props.authorUrl}>{props.author}</a>&nbsp;<a href={props.url}><i class="fa fa-external-link BGauthorLink" aria-hidden="true"></i></a></div>
-
+  return (
+      <div className="BGCreditsContainer">
+        <p>Photo by</p>
+        <div className="BGauthorContainer">
+          <a href={props.authorUrl}>
+            {props.author}
+          </a>
+          <a href={props.url}>
+            <i class="fa fa-external-link" aria-hidden="true"></i>
+          </a>
         </div>
-        </div>
-    )
-}
+      </div>
+  );
+};
 
 BGCredits.propTypes = {
-    author: PropTypes.string,
-    url: PropTypes.string,
-    authorUrl: PropTypes.string,
-  };
+  author: PropTypes.string,
+  url: PropTypes.string,
+  authorUrl: PropTypes.string,
+};
 
-export default BGCredits
+export default BGCredits;
