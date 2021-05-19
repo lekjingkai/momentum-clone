@@ -19,6 +19,8 @@ const Header = () => {
   const [imageData, setImageData] = useState([]);
   const [randomImageCount, setRandomImageCount] = useState(0);
 
+  const [fetchStatus, setFetchStatus] = useState(true);
+
   const queryArray = [
     "ocean",
     "forest",
@@ -53,22 +55,35 @@ const Header = () => {
     );
     setImageLoading(false);
     const data = await res.json();
+    console.log(data)
+    //if api fetch fails
     // if(data.hasOwnProperty("error")){
     //   console.log("dee nusts")
     // }else{
-
+    //   console.log("aaa")
     // }
     return data;
   };
 
   const getImages = async () => {
     const imageFromApi = await fetchImage();
-    setImageData(imageFromApi);
-    if (imageFromApi.photos.length > 0) {
-      setRandomImageCount(
-        Math.floor(Math.random() * imageFromApi.photos.length - 1)
-      );
-    }
+    // setImageData(imageFromApi);
+    // if (imageFromApi.photos.length > 0) {
+    //   setRandomImageCount(
+    //     Math.floor(Math.random() * imageFromApi.photos.length - 1)
+    //   );
+    // }
+        if (imageFromApi.hasOwnProperty("error")) {
+          console.log("dee nusts");
+        } else {
+          console.log("aaa");
+          setImageData(imageFromApi);
+          if (imageFromApi.photos.length > 0) {
+            setRandomImageCount(
+              Math.floor(Math.random() * imageFromApi.photos.length - 1)
+            );
+          }
+        }
   };
 
   useEffect(() => {
@@ -106,7 +121,7 @@ const Header = () => {
       {imageData && (
         <div>
           {imageLoading === false && <div className={`gradient`}></div>}
-          {imageData &&
+          {fetchStatus ? imageData &&
             imageData.photos &&
             imageData.photos[randomImageCount] &&
             imageData.photos[randomImageCount].src && (
@@ -116,6 +131,13 @@ const Header = () => {
                   backgroundImage: `url(${imageData.photos[randomImageCount].src.large2x})`,
                 }}
               ></div>
+            ) : (
+              <div
+              className={`bg-image ${imageLoading ? "" : "fadeInAnim"}`}
+              style={{
+                backgroundImage: `url(${require("../assets/placeholder.jpg").default})`,
+              }}
+            ></div>
             )}
           <Top left={leftTopComponent} right={rightTopComponent} />
           <div className="headerContainer">

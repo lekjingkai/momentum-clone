@@ -93,8 +93,6 @@ const Todo = () => {
       setValue("");
     };
 
-
-
     return (
       <form onSubmit={handleSubmit}>
         <input
@@ -113,10 +111,7 @@ const Todo = () => {
 
   return (
     <div className="todoContainer">
-      <p
-        className="todo-btn"
-        onClick={() => setShowBubble(!showBubble)}
-      >
+      <p className="todo-btn" onClick={() => setShowBubble(!showBubble)}>
         <i class="fa fa-list-ul" aria-hidden="true"></i> Todo
       </p>
       <TextBubble

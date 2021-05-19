@@ -1,89 +1,87 @@
 .speech-bubble {
-	position: absolute;
-	background: white;
-	border-radius: .4em;
-visibility: none;
-    opacity: 0;
-z-index: -1;
+  position: absolute;
+  background: white;
+  border-radius: 0.4em;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
 }
 
 .speech-bubble:after {
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 0;
-	border: 7px solid transparent;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
 }
 
 .bottom-speech-bubble {
-    bottom: 55px;
+  bottom: 55px;
 }
 
 .bottom-speech-bubble:after {
-	bottom: 0;
-    border-top-color: white;
-	border-bottom: 0;
-	margin-left: -7px;
-	margin-bottom: -7px;
+  bottom: 0;
+  border-top-color: white;
+  border-bottom: 0;
+  margin-left: -7px;
+  margin-bottom: -7px;
 }
 
-
-
-.top-speech-bubble{
-    top: 40px;
+.top-speech-bubble {
+  top: 40px;
 }
 
 .top-speech-bubble:after {
-	top: 0;
-    border-bottom-color: white;
-	border-top: 0;
-	margin-left: -7px;
-	margin-top: -7px;
+  top: 0;
+  border-bottom-color: white;
+  border-top: 0;
+  margin-left: -7px;
+  margin-top: -7px;
 }
 
 .todo-bubble {
-    padding: 10px;
-    right: 10px;
-    width: 300px;
-    transition: 0.2s;
+  padding: 10px;
+  right: 10px;
+  width: 300px;
+  transition: 0.2s;
 }
 
 .todo-bubble::after {
-    left: 90%;
+  left: 90%;
 }
 
 .setting-bubble {
-    padding: 10px;
-    left: 10px;
-    width: 300px;
-    transition: 0.2s;
+  padding: 10px;
+  left: 10px;
+  width: 300px;
+  transition: 0.2s;
 }
 
 .setting-bubble::after {
-    left: 7%;
+  left: 7%;
 }
 
 .link-bubble {
-    padding: 10px;
-    left: 10px;
-    width: 300px;
-    transition: 0.2s;
+  padding: 10px;
+  left: 10px;
+  width: 300px;
+  transition: 0.2s;
 }
 
 .link-bubble::after {
-    left: 13%;
+  left: 13%;
 }
 
 .bottom-bubble-show {
-    visibility: visible;
-    opacity: 1;
-    bottom: 65px;
-    z-index: 99;
+  visibility: visible;
+  opacity: 1;
+  bottom: 65px;
+  z-index: 99;
 }
 
 .top-bubble-show {
-    visibility: visible;
-    opacity: 1;
-    top: 65px;
-    z-index: 99;
+  visibility: visible;
+  opacity: 1;
+  top: 65px;
+  z-index: 99;
 }

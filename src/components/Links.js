@@ -144,7 +144,6 @@ const Links = () => {
           showBubble ? "top-bubble-show" : ""
         }`}
       >
-        {/* <p className="links-bubble-content">In Progress</p> */}
         <div>
           <div className="link-header">
             <h3 className="link-content">

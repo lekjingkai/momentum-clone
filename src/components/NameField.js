@@ -25,6 +25,7 @@ const NameField = (props) => {
     <div className="namefieldContainer">
       <div>{props.children}</div>
       {props.active ? (
+        <div>
         <input
           value={props.value}
           onChange={props.inputChange}
@@ -32,6 +33,7 @@ const NameField = (props) => {
           onBlur={props.blur}
           autoFocus
         />
+        </div>
       ) : (
         <div
           onDoubleClick={props.doubleClick}

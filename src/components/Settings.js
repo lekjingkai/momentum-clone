@@ -23,7 +23,8 @@ const Settings = () => {
     };
   });
 
-  const clearData= (clearOption) => {
+  const clearData = (clearOption) => {
+    console.log("help pls" + clearOption);
     switch (clearOption) {
       case 0:
         localStorage.removeItem("links");
@@ -34,7 +35,7 @@ const Settings = () => {
       case 2:
         localStorage.clear();
     }
-  }
+  };
 
   return (
     <div ref={ref} className="settingButtonContainer">
@@ -51,16 +52,39 @@ const Settings = () => {
           showBubble ? "bottom-bubble-show" : ""
         }`}
       >
-        {/* <p className="setting-bubble-content">In Progress</p> */}
         <div>
-        <div className="setting-header">
+          <div className="setting-header">
             <h3 className="setting-content">
-              Settings<i class="fa fa-cog setting-content" aria-hidden="true"></i>
+              Settings
+              <i class="fa fa-cog setting-content" aria-hidden="true"></i>
             </h3>
           </div>
-          <div className="settingContainer"><p onClick={clearData(0)} className="setting-content">Clear all your links</p><button>Clear</button></div>
-        <div  className="settingContainer"><p onClick={clearData(1)} className="setting-content">Clear all your todos</p><button>Clear</button></div>
-        <div  className="settingContainer"><p onClick={clearData(2)} className="setting-content">Clear all your data</p><button>Clear</button></div>
+          <form>
+            <div className="settingContainer">
+              <p className="setting-content">Clear all your links</p>
+              <input
+                onClick={() => clearData(0)}
+                type="submit"
+                value="Clear"
+              ></input>
+            </div>
+            <div className="settingContainer">
+              <p className="setting-content">Clear all your todos</p>
+              <input
+                onClick={() => clearData(1)}
+                type="submit"
+                value="Clear"
+              ></input>
+            </div>
+            <div className="settingContainer">
+              <p className="setting-content">Clear all your data</p>
+              <input
+                onClick={() => clearData(2)}
+                type="submit"
+                value="Clear"
+              ></input>
+            </div>
+          </form>
         </div>
       </TextBubble>
     </div>
