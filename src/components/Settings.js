@@ -23,8 +23,21 @@ const Settings = () => {
     };
   });
 
+  const clearData= (clearOption) => {
+    switch (clearOption) {
+      case 0:
+        localStorage.removeItem("links");
+        break;
+      case 1:
+        localStorage.removeItem("todo");
+        break;
+      case 2:
+        localStorage.clear();
+    }
+  }
+
   return (
-    <div ref={ref} className="settingContainer">
+    <div ref={ref} className="settingButtonContainer">
       <p
         className={`setting ${hoverRotate ? "rotateSetting" : ""}`}
         onMouseOver={() => sethoverRotate(true)}
@@ -34,11 +47,21 @@ const Settings = () => {
         <i class="fa fa-cog" aria-hidden="true"></i>
       </p>
       <TextBubble
-        todoTextBubble={`speech-bubble bottom-speech-bubble setting-bubble ${
+        bubbleClassName={`speech-bubble bottom-speech-bubble setting-bubble ${
           showBubble ? "bottom-bubble-show" : ""
         }`}
       >
-        <p className="setting-bubble-content">In Progress</p>
+        {/* <p className="setting-bubble-content">In Progress</p> */}
+        <div>
+        <div className="setting-header">
+            <h3 className="setting-content">
+              Settings<i class="fa fa-cog setting-content" aria-hidden="true"></i>
+            </h3>
+          </div>
+          <div className="settingContainer"><p onClick={clearData(0)} className="setting-content">Clear all your links</p><button>Clear</button></div>
+        <div  className="settingContainer"><p onClick={clearData(1)} className="setting-content">Clear all your todos</p><button>Clear</button></div>
+        <div  className="settingContainer"><p onClick={clearData(2)} className="setting-content">Clear all your data</p><button>Clear</button></div>
+        </div>
       </TextBubble>
     </div>
   );

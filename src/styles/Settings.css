@@ -1,4 +1,4 @@
-.settingContainer {
+.settingButtonContainer {
   display: flex;
   align-items: center;
 }
@@ -12,23 +12,60 @@
   transition: all 0.1s linear;
 }
 
-.settingContainer p i {
+.settingButtonContainer p i {
   color: white;
   opacity: 0.7;
   transition: 0.3s;
 }
 
-.settingContainer p i:hover {
+.settingButtonContainer p i:hover {
   opacity: 1;
 }
 
-.setting-bubble-content {
+.setting-content {
   color: black;
   text-shadow: none;
 }
 
 .rotateSetting {
   animation: rotationSetting 4s infinite linear;
+}
+
+.settingContainer{
+  display: flex;
+  padding: 5px 0px;
+align-items: center;
+}
+
+.settingContainer button{
+margin-left: auto;
+}
+
+.setting-header {
+  text-align: left;
+  padding: 5px 0px;
+}
+
+.setting-header h3 {
+  font-weight: normal;
+}
+
+.setting-header i {
+  padding: 0px 10px;
+}
+
+.settingContainer button{
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  text-shadow: none;
+  background-color: #e63946;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.settingContainer button:hover{
+  background-color: #cf333f;
 }
 
 @keyframes rotationSetting {

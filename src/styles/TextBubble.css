@@ -55,29 +55,24 @@ z-index: -1;
 .setting-bubble {
     padding: 10px;
     left: 10px;
-    width: 100px;
+    width: 300px;
     transition: 0.2s;
 }
 
 .setting-bubble::after {
-    left: 20%;
+    left: 7%;
 }
 
 .link-bubble {
     padding: 10px;
     left: 10px;
-    width: 100px;
+    width: 300px;
     transition: 0.2s;
 }
 
 .link-bubble::after {
-    left: 40%;
+    left: 13%;
 }
-
-/* .bubble-content{
-    color: black;
-    text-shadow: none;
-} */
 
 .bottom-bubble-show {
     visibility: visible;

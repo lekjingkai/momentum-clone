@@ -6,7 +6,7 @@ import TextBubble from "./TextBubble";
 import { useState, useEffect } from "react";
 
 const Todo = () => {
-  const [showTodoBubble, setShowTodoBubble] = useState(false);
+  const [showBubble, setShowBubble] = useState(false);
   const [checked, setChecked] = useState(false);
 
   let focusInput = null;
@@ -27,7 +27,7 @@ const Todo = () => {
       localStorage.getItem("todo") !== null &&
       localStorage.getItem("todo") !== "[]"
     ) {
-      setShowTodoBubble(true);
+      setShowBubble(true);
     }
   }, []);
 
@@ -44,7 +44,7 @@ const Todo = () => {
           <span className="todo-checkmark"></span>
         </label>
         <p
-          className={`todo-text todo-content ${
+          className={`todo-content ${
             todo.isCompleted ? "todo-text-completed" : ""
           }`}
         >
@@ -93,6 +93,8 @@ const Todo = () => {
       setValue("");
     };
 
+
+
     return (
       <form onSubmit={handleSubmit}>
         <input
@@ -113,16 +115,16 @@ const Todo = () => {
     <div className="todoContainer">
       <p
         className="todo-btn"
-        onClick={() => setShowTodoBubble(!showTodoBubble)}
+        onClick={() => setShowBubble(!showBubble)}
       >
         <i class="fa fa-list-ul" aria-hidden="true"></i> Todo
       </p>
       <TextBubble
-        todoTextBubble={`speech-bubble bottom-speech-bubble todo-bubble ${
-          showTodoBubble ? "bottom-bubble-show" : ""
+        bubbleClassName={`speech-bubble bottom-speech-bubble todo-bubble ${
+          showBubble ? "bottom-bubble-show" : ""
         }`}
       >
-        <div className="todo-bubble-content">
+        <div>
           <div className="todo-header">
             <h3 className="todo-content">
               Todo<i class="fa fa-pencil todo-content" aria-hidden="true"></i>

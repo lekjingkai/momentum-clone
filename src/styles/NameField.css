@@ -38,11 +38,37 @@
   cursor: text;
 }
 
-@media screen and (max-width: 600px) {
-  .nameInput,
+@media screen and (max-width: 800px) {
   .nameText,
-  .greetingText {
+  .greetingText,
+  .namefieldContainer input {
+    font-size: 40px;
+  }
+
+  
+  .namefieldContainer input{
+    width:150px;
+  }
+
+  .nameInput {
+    width: 100px;
+  }
+
+  .nameText-blank {
+    min-width: 100px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .nameText,
+  .greetingText,
+  .namefieldContainer input {
     font-size: 30px;
+  }
+
+  .namefieldContainer input{
+    width:100px;
   }
 
   .nameInput {

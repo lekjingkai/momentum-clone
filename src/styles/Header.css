@@ -5,6 +5,7 @@
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+  transition: 0.3s;
 }
 
 .middleContent {
@@ -103,5 +104,11 @@
 
   .headerText {
     width: 100%;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .headerContainer {
+    top: 200px;
   }
 }

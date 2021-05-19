@@ -1,26 +1,168 @@
-.linksContainer{
-    padding: 10px 0px;
+.linksContainer {
+  padding: 10px 0px;
 }
 
-.links-btn{
-    margin: 0px 20px;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 0.3s;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
+.links-btn {
+  margin: 0px 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
 }
 
-.links-btn i{
-    padding-right: 5px;
+.links-btn i {
+  padding-right: 5px;
 }
 
-.links-btn:hover{
-    opacity: 1;
+.links-btn:hover {
+  opacity: 1;
 }
 
-.links-bubble-content{
-    color:black;
-    text-shadow: none;
+/*********Link Bubble*********/
+.link-header {
+  text-align: left;
+  padding: 5px 0px;
+}
+
+.link-header h3 {
+  font-weight: normal;
+}
+
+.link-header i {
+  padding: 0px 10px;
+}
+
+.link-content {
+  color: black;
+  text-shadow: none;
+}
+
+.link-list {
+  text-align: left;
+}
+
+/* Link-list */
+.link {
+  background: #fff;
+  padding: 5px 0px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.link a {
+  margin-left: 2px;
+  overflow: hidden;
+  transition: 0.3s;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.link a:hover {
+  opacity: 1;
+}
+
+.link a i {
+  margin-right: 5px;
+}
+
+.link button {
+  padding: 5px 8px;
+  border-radius: 50%;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+  background-color: #e6e6e6;
+  transition: 0.3s;
+}
+
+.link button:hover {
+  background-color: #cccccc;
+}
+
+/* Link Form */
+.linkForm {
+  display: none;
+}
+
+.linkForm-show {
+  display: block;
+}
+
+.show-hide-addlink-btn {
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  padding: 5px 2px;
+  font-size: 16px;
+  transition: 0.3s;
+  opacity: 0.8;
+  background-color: transparent;
+}
+
+.show-hide-addlink-btn:hover {
+  opacity: 1;
+}
+
+.show-hide-addlink-btn i {
+  margin-right: 5px;
+}
+
+.link-input {
+  margin: 5px 0px;
+  outline: none;
+  width: 100%;
+  padding: 2px;
+  font-weight: lighter;
+  border: none;
+  border-bottom: 2px solid #999999;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.link-input:focus,
+.link-input:hover {
+  border-bottom: 2px solid black;
+}
+
+.link-submit-btn {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  background-color: #457b9d;
+  border-radius: 5px;
+  font-size: 16px;
+  text-shadow: none;
+  margin-top: 10px;
+}
+
+.link-submit-btn:hover {
+  background-color: #3e6f8d;
+}
+
+.no-link-container {
+  margin: 25px 0px 25px 0px;
+  text-align: center;
+}
+
+.no-link-btn {
+  padding: 7px 12px;
+  margin-top: 10px;
+  text-shadow: none;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  background-color: #457b9d;
+}
+
+.no-link-btn:hover {
+  background-color: #3e6f8d;
 }

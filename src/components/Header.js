@@ -53,6 +53,11 @@ const Header = () => {
     );
     setImageLoading(false);
     const data = await res.json();
+    // if(data.hasOwnProperty("error")){
+    //   console.log("dee nusts")
+    // }else{
+
+    // }
     return data;
   };
 

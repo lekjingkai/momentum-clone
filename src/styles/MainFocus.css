@@ -123,6 +123,13 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .mainFocusContainer,
+  .mainFocusContainer input {
+    font-size: 30px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .mainFocusContainer,
   .mainFocusContainer input {
