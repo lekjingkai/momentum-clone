@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/momentum-clone/static/css/main.de6fa9a7.chunk.css",
-    "main.js": "/momentum-clone/static/js/main.8867749b.chunk.js",
-    "main.js.map": "/momentum-clone/static/js/main.8867749b.chunk.js.map",
+    "main.css": "/momentum-clone/static/css/main.5860ca05.chunk.css",
+    "main.js": "/momentum-clone/static/js/main.400eea5f.chunk.js",
+    "main.js.map": "/momentum-clone/static/js/main.400eea5f.chunk.js.map",
     "runtime-main.js": "/momentum-clone/static/js/runtime-main.7fce0515.js",
     "runtime-main.js.map": "/momentum-clone/static/js/runtime-main.7fce0515.js.map",
-    "static/js/2.64ca5636.chunk.js": "/momentum-clone/static/js/2.64ca5636.chunk.js",
-    "static/js/2.64ca5636.chunk.js.map": "/momentum-clone/static/js/2.64ca5636.chunk.js.map",
+    "static/js/2.fbcba224.chunk.js": "/momentum-clone/static/js/2.fbcba224.chunk.js",
+    "static/js/2.fbcba224.chunk.js.map": "/momentum-clone/static/js/2.fbcba224.chunk.js.map",
     "static/js/3.765bcc74.chunk.js": "/momentum-clone/static/js/3.765bcc74.chunk.js",
     "static/js/3.765bcc74.chunk.js.map": "/momentum-clone/static/js/3.765bcc74.chunk.js.map",
     "index.html": "/momentum-clone/index.html",
-    "static/css/main.de6fa9a7.chunk.css.map": "/momentum-clone/static/css/main.de6fa9a7.chunk.css.map",
-    "static/js/2.64ca5636.chunk.js.LICENSE.txt": "/momentum-clone/static/js/2.64ca5636.chunk.js.LICENSE.txt"
+    "static/css/main.5860ca05.chunk.css.map": "/momentum-clone/static/css/main.5860ca05.chunk.css.map",
+    "static/js/2.fbcba224.chunk.js.LICENSE.txt": "/momentum-clone/static/js/2.fbcba224.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7fce0515.js",
-    "static/js/2.64ca5636.chunk.js",
-    "static/css/main.de6fa9a7.chunk.css",
-    "static/js/main.8867749b.chunk.js"
+    "static/js/2.fbcba224.chunk.js",
+    "static/css/main.5860ca05.chunk.css",
+    "static/js/main.400eea5f.chunk.js"
   ]
 }
