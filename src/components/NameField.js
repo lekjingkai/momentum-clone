@@ -2,10 +2,10 @@ import React from "react";
 import "../styles/NameField.css";
 import { useState, useEffect } from "react";
 
-
 const NameField = (props) => {
   const [nameBlank, setNameBlank] = useState(false);
 
+  //calls props.blur on enter which changes the name input into text
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       return props.blur();
@@ -13,14 +13,13 @@ const NameField = (props) => {
   };
 
   useEffect(() => {
-if(props.value === ''){
-  setNameBlank(true)
-}else{
-  setNameBlank(false)
-}
+    //sets the bottom border to white if name is black to indicate a field to be entered
+    if (props.value === "") {
+      setNameBlank(true);
+    } else {
+      setNameBlank(false);
+    }
   }, [props.value]);
-
-
 
   return (
     <div className="namefieldContainer">
@@ -32,10 +31,12 @@ if(props.value === ''){
           onKeyPress={handleKeyPress}
           onBlur={props.blur}
           autoFocus
-          className="nameInput"
         />
       ) : (
-        <div onDoubleClick={props.doubleClick} className={`nameText ${nameBlank ? "nameText-blank" : ""}`}>
+        <div
+          onDoubleClick={props.doubleClick}
+          className={`nameText ${nameBlank ? "nameText-blank" : ""}`}
+        >
           {props.value}
         </div>
       )}

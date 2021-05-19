@@ -2,7 +2,7 @@
     padding: 10px 0px;
 }
 
-.links{
+.links-btn{
     margin: 0px 20px;
     cursor: pointer;
     opacity: 0.7;
@@ -12,11 +12,11 @@
     align-items: center;
 }
 
-.links i{
+.links-btn i{
     padding-right: 5px;
 }
 
-.links:hover{
+.links-btn:hover{
     opacity: 1;
 }
 

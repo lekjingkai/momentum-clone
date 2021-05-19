@@ -1,25 +1,24 @@
-.test{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+.quoteContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.quoteContainer {
+.blockContainer {
   position: absolute;
-  /* display: inline-block; */
   bottom: 0;
   z-index: 1;
-
 }
 
-.quoteBlock{
+.quoteBlock {
   max-width: 60%;
-  /* background-color: brown; */
+  width: 60%;
+display: flex;
+justify-content: center;
 }
 
-.authorBlock{
+.authorBlock {
   transform: translate(-50%);
 }
 
@@ -32,12 +31,9 @@ align-items: center;
   margin-bottom: 0px;
   transition: 0.3s;
   padding: 5px 5px 0px 5px;
-  /* text-shadow: 0 1px 0 black; */
-
 }
 
 .slideUp {
-  /* margin-bottom: 10px; */
   transform: translateY(-12px);
 }
 
@@ -47,63 +43,40 @@ align-items: center;
   margin-bottom: 0px;
   opacity: 0;
   visibility: hidden;
-  /* transform: translate(-50%); */
   display: flex;
   align-items: center;
-
-
 }
 
-.author i {
-margin-left: 5px;
-
-
+.author a {
+  margin-left: 5px;
 }
 
 .slideDownFadeIn {
-  /* margin-bottom: -5px; */
   transform: translateY(7px);
-  /* opacity: 0.7;
- */
- opacity: 1;
- visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
-.TextSlideDownFadeIn{
-  /* margin-bottom: -5px; */
-  /* transform: translateY(7px); */
+.TextSlideDownFadeIn {
   transition: 0.3s;
   opacity: 0.7;
 }
 
 .TextSlideDownFadeIn:hover {
-  /* margin-bottom: -5px; */
   opacity: 1;
-
 }
 
 .spinLoading {
   font-size: 20px;
   animation: rotationSetting 4s infinite linear;
   position: absolute;
-  /* display: inline-block; */
   bottom: 10px;
 }
 
-.notLoaded{
+.notLoaded {
   opacity: 0;
   visibility: none;
 }
-
-.QuoteAuthorLink{
-  text-decoration: none;
-  opacity: 1;
-  transition: 0.3s;
-          }
-  
-          .QuoteAuthorLink:hover{
-              opacity: 1.3;
-                  }
 
 
 @keyframes rotationSetting {
@@ -116,40 +89,43 @@ margin-left: 5px;
 }
 
 @media screen and (max-width: 600px) {
+  .quoteContainer {
+    position: relative;
+  }
 
-    .quoteContainer {
-        position: relative;
-      }
+  .hoverQuote {
+    padding-bottom: 0px;
+  }
 
-      .hoverQuote {
-        padding-bottom: 0px;
-      }
+  .slideUp {
+    transform: none;
+  }
 
-      .slideUp {
-        transform: none;
-      }
+  .slideDownFadeIn {
+    transform: none;
+  }
 
-      .slideDownFadeIn {
-        transform: none;
-      }
+  .quote {
+    font-size: 12px;
+    transform: translateY(-20px);
+    opacity: 1;
+  }
 
-      .quote{
-font-size: 12px;
-      }
+  .author {
+    opacity: 1;
+    visibility: visible;
+  }
 
-      .author{
-          /* transform: none; */
-          opacity: 1;
-          visibility: visible;
-      }
+  .quoteBlock {
+    width: 100%;
+    max-width: 100%;
+  }
 
-      .quoteBlock{
-        max-width: 100%;
-        /* background-color: brown; */
-      }
+  .authorBlock {
+    transform: translate(-50%);
+  }
 
-      .authorBlock{
-        transform: none;
-                /* background-color: brown; */
-      }
+  .TextSlideDownFadeIn {
+    opacity: 1;
+  }
 }

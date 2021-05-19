@@ -1,40 +1,41 @@
-.settingContainer{
-    display: flex;
-    align-items: center;
+.settingContainer {
+  display: flex;
+  align-items: center;
 }
 
-.setting{
-font-size: 25px;
-margin: 0px 20px;
-cursor: pointer;
--moz-transition: all 0.1s linear;
--webkit-transition: all 0.1s linear;
-transition: all 0.1s linear;
+.setting {
+  font-size: 25px;
+  margin: 0px 20px;
+  cursor: pointer;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 
-.settingIcon{
-    color:white;  
-    opacity: 0.7;
-    transition: 0.3s;
+.settingContainer p i {
+  color: white;
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
-.setting-bubble-content{
-  color:black;
+.settingContainer p i:hover {
+  opacity: 1;
+}
+
+.setting-bubble-content {
+  color: black;
   text-shadow: none;
 }
 
-.settingIcon:hover{  
-    opacity: 1;
+.rotateSetting {
+  animation: rotationSetting 4s infinite linear;
 }
-    .rotateSetting {
-        animation: rotationSetting 4s infinite linear;
-      }
 
-      @keyframes rotationSetting {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(359deg);
-        }
-      }
+@keyframes rotationSetting {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

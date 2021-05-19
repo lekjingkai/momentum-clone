@@ -1,47 +1,45 @@
-.todoContainer{
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+.todoContainer {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
-.todo-btn{
-    margin: 0px 20px;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 0.3s;
+/* Todo button for popover */
+.todo-btn {
+  margin: 0px 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
-.todo:hover{
+.todo-btn:hover {
   opacity: 1;
 }
 
-.todo-header{
+/*********Todo Bubble*********/
+.todo-header {
   text-align: left;
   padding: 5px 0px;
 }
 
 .todo-header h3 {
-  color:black;
-  text-shadow: none;
   font-weight: normal;
 }
 
-.todo-header i{
+.todo-header i {
   padding: 0px 10px;
-  color:black;
+}
+
+.todo-content {
+  color: black;
   text-shadow: none;
 }
 
-.todo-content{
-  color:black;
-  text-shadow: none;
-
-}
-
-.todo-list{
+.todo-list {
   text-align: left;
 }
 
+/* Todo-list */
 .todo {
   background: #fff;
   padding: 5px 0px;
@@ -50,147 +48,58 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  color: black;
-  text-shadow: none;
 }
 
-/* The container */
-.todo-checkmarkContainer{
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-}
-
-/* Hide the browser's default checkbox */
-.todo-checkmarkContainer input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.todo-checkmark {
-  position: absolute;
-  height: 15px;
-  width: 15px;  
-  background-color: transparent;
-  border: 1px solid black;
-  transition: 0.3s;
-  border-radius: 5px;
-  
-}
-
-/* On mouse-over, add a grey background color */
-.todo-checkmarkContainer:hover input ~ .todo-checkmark {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* When the checkbox is checked, add a blue background */
-.todo-checkmarkContainer input:checked ~ .todo-checkmark {
-  background-color: transparent;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.todo-checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.todo-checkmarkContainer input:checked ~ .todo-checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.todo-checkmarkContainer .todo-checkmark:after {
-  left: 4px;
-  top: -2px;
-  width: 5px;
-  height: 10px;
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  
-}
-
-
-.todo-text{
-  color:black;
-  text-shadow: none;
+.todo p {
   margin: 0px 10px 0px 25px;
+  overflow: hidden;
 }
 
-.todo-text-completed{
-text-decoration: line-through;
+.todo-text-completed {
+  text-decoration: line-through;
 }
 
-.todo button{
-padding: 5px 8px;
-color: black;
-border-radius: 50%;
-border: none;
-margin-left: auto;
-cursor: pointer;
-background-color: #e6e6e6;
-transition: 0.3s;
+.todo button {
+  padding: 5px 8px;
+  border-radius: 50%;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+  background-color: #e6e6e6;
+  transition: 0.3s;
 }
 
-.todo button:hover{
+.todo button:hover {
   background-color: #cccccc;
+}
 
-  }
+/* Todo Form */
+.todo-input {
+  margin: 5px 0px;
+  outline: none;
+  width: 100%;
+  padding: 2px;
+  font-weight: lighter;
+  border: none;
+  font-size: 18px;
+}
 
-  .todo-input{
-    margin: 5px 0px;
-    color: black;
-    text-shadow: none;
-    outline: none;
-    width: 100%;
-    padding: 2px;
-    font-weight:lighter;
-border: none;
-    font-size: 18px;
-  }
+.no-todo-container {
+  margin: 50px 0px 100px 0px;
+  text-align: center;
+}
 
-
-
-.todo-icon{
-  color: black;
+.no-todo-btn {
+  padding: 7px 12px;
+  margin-top: 10px;
   text-shadow: none;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  background-color: #344fa1;
 }
 
-.no-todo-container{
-margin: 50px 0px 100px 0px;
-text-align: center;
-}
-
-.no-todo{
-  color: black;
-  text-shadow: none;
-}
-
-.no-todo-btn{
-padding: 7px 12px;
-margin-top: 10px;
-text-shadow: none;
-transition: 0.3s;
-cursor: pointer;
-border-radius: 20px;
-border: none;
-background-color: #344fa1;
-}
-
-.no-todo-btn:hover{
+.no-todo-btn:hover {
   background-color: #4861aa;
-  }
+}

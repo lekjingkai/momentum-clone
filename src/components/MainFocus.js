@@ -1,47 +1,35 @@
 import React from "react";
+import "../styles/CustomCheckmark.css";
 import "../styles/MainFocus.css";
 import { useState, useEffect } from "react";
 
-
-
 const MainFocus = () => {
-  // const [title, setTitle] = useState("");
-  // if(localStorage.getItem('todaygoal') === null){
-  //   const test2 = ''
-  // }
-  // else{
-  //   const test2 = JSON.parse(localStorage.getItem('todaygoal'))
-  //   const ggg = test2.goal
-  // }
-
-  const checkLSGoal = (e) => {
-  if(e === null){
-    return ''
-  }
-  else{
-    const test2 = JSON.parse(e)
-    return(test2.goal)
-  }
-  }
-
-  // const test2 = JSON.parse(localStorage.getItem('todaygoal'))
-  // const ggg = test2.goal
-  const [title, setTitle] = useState(checkLSGoal(localStorage.getItem('todaygoal')));
   const [todayGoal, setTodayGoal] = useState(false);
   const [selected, setSelected] = useState(false);
   const [fade, setFade] = useState(false);
   const [fadeGoalHover, setFadeGoalHover] = useState(false);
-
   const [disableInput, setDisableInput] = useState(false);
 
   const fadeDuration = 600;
 
-  useEffect(() => {
-    // localStorage.setItem('todaygoal', title);
+  //check if localstorage item exists
+  const checkLSGoal = (e) => {
+    if (e === null) {
+      return "";
+    } else {
+      const LSgoal = JSON.parse(e);
+      return LSgoal.goal;
+    }
+  };
 
-    //change to localStorage.getItem('todaygoal') !== null
-    if(checkLSGoal(localStorage.getItem('todaygoal')) !== ''){
-      if(JSON.parse(localStorage.getItem('todaygoal')).cleared == false){
+  const [title, setTitle] = useState(
+    checkLSGoal(localStorage.getItem("todaygoal"))
+  );
+
+  useEffect(() => {
+    //check localstorage if goal has been entered but not cleared
+    if (checkLSGoal(localStorage.getItem("todaygoal")) !== "") {
+      if (JSON.parse(localStorage.getItem("todaygoal")).cleared == false) {
         setDisableInput(!disableInput);
         setFade(!fade);
         setTimeout(() => {
@@ -49,72 +37,47 @@ const MainFocus = () => {
         }, fadeDuration);
       }
     }
+  }, []);
 
-      }, []);
+  //complete goal by checking the checkbox
+  const completeGoal = () => {
+    setTodayGoal(!todayGoal);
+    const boolClear = JSON.parse(localStorage.getItem("todaygoal")).cleared;
+    const LSgoal = {
+      goal: title,
+      cleared: !boolClear,
+    };
+    localStorage.setItem("todaygoal", JSON.stringify(LSgoal));
+  };
 
-      
-
-  const changeDiv = () => {
+  //close the goal and reverts back to enter input
+  const closeGoal = () => {
     setDisableInput(!disableInput);
     setFade(!fade);
-    // localStorage.setItem('todaygoal', '')
-    localStorage.removeItem('todaygoal')
+    localStorage.removeItem("todaygoal");
     setTimeout(() => {
       setSelected(!selected);
       setTodayGoal(false);
-
     }, fadeDuration);
   };
 
-  //on enter, changes the input into the task
-  const handleKeyPress = (event) => {
+  //captures the input value and change to the current goal
+  const enterGoal = (event) => {
     if (event.key === "Enter") {
       if (title != "") {
         setDisableInput(!disableInput);
         setFade(!fade);
-        const todayGoal2 = {
+        const LSgoal = {
           goal: title,
           cleared: false,
-      }
-      // alert(new Date())
-      localStorage.setItem('todaygoal', JSON.stringify(todayGoal2));
-// console.log(localStorage.getItem('todaygoal'))
-
+        };
+        localStorage.setItem("todaygoal", JSON.stringify(LSgoal));
         setTimeout(() => {
           setSelected(!selected);
         }, fadeDuration);
       }
     }
   };
-
-  const clearGoal = () => {
-    setTodayGoal(!todayGoal);
-    const boolClear = JSON.parse(localStorage.getItem('todaygoal')).cleared 
-    const todayGoal2 = {
-      goal: title,
-      cleared: !boolClear,
-  }
-  localStorage.setItem('todaygoal', JSON.stringify(todayGoal2));
-  // console.log(localStorage.getItem('todaygoal'))
-  };
-
-  // const setGoal = (e) => {
-  //   setTitle(e)
-  //   localStorage.setItem('todaygoal', title);
-  //   console.log(localStorage.getItem('todaygoal'))
-  // };
-
-  // useEffect(() => {
-  //   localStorage.setItem('todaygoal', title);
-  //     }, [title]);
-
-
-// useEffect(() => {
-//   if(localStorage.getItem('todaygoal') != ''){
-//     setSelected(true)
-//   }
-//     });
-// console.log(localStorage.getItem('todaygoal'))
 
   return (
     <div className="mainFocusContainer">
@@ -123,7 +86,7 @@ const MainFocus = () => {
           <p>What is your main focus for today?</p>
           <input
             onChange={(event) => setTitle(event.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyPress={enterGoal}
             disabled={disableInput}
           ></input>
         </div>
@@ -137,11 +100,9 @@ const MainFocus = () => {
           <p>Today's Goal</p>
           <div className="todayGoalContainer">
             <label
-              className={`checkmarkContainer ${
-                fadeGoalHover ? "fadeIn" : ""
-              }`}
+              className={`checkmarkContainer ${fadeGoalHover ? "fadeIn" : ""}`}
             >
-              <input type="checkbox" onClick={clearGoal} />
+              <input type="checkbox" onClick={completeGoal} />
               <span class="checkmark"></span>
             </label>
             <p
@@ -153,11 +114,10 @@ const MainFocus = () => {
               className={`cancelBtn ${todayGoal ? "rotate" : ""} ${
                 fadeGoalHover ? "fadeIn" : ""
               }`}
-              onClick={changeDiv}
+              onClick={closeGoal}
             >
-              <i className="fa fa-times icon"></i>
+<i class="fa fa-times" aria-hidden="true"></i>
             </button>
-
           </div>
           <p className={`goalSuccessText ${todayGoal ? "fadeInOutAnim" : ""}`}>
             Nicely done!

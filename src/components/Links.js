@@ -5,25 +5,15 @@ import TextBubble from "./TextBubble";
 import { useState, useEffect, useRef } from "react";
 
 const Links = () => {
-  const [showSettingBubble, setShowSettingBubble] = useState(false);
-  const [showSetting, setShowSetting] = useState(false);
+  const [showBubble, setShowBubble] = useState(false);
 
   const ref = useRef(null);
 
+  //closes bubble if click anywhere outside ref
   const handleClickOutside = (event) => {
     if (ref.current && !ref.current.contains(event.target)) {
-      setShowSetting(false);
-      setTimeout(() => {
-        setShowSettingBubble(false);
-      });
+      setShowBubble(false);
     }
-  };
-
-  const changeDiv = () => {
-    setShowSetting(!showSetting);
-    setTimeout(() => {
-      setShowSettingBubble(!showSettingBubble);
-    });
   };
 
   useEffect(() => {
@@ -34,13 +24,13 @@ const Links = () => {
   });
 
   return (
-    <div className="linksContainer">
-      <p ref={ref} className="links" onClick={changeDiv}>
-        <i class="fa fa-link" aria-hidden="true"></i> Links
+    <div ref={ref} className="linksContainer">
+      <p className="links-btn" onClick={() => setShowBubble(!showBubble)}>
+        <i class="fa fa-link" aria-hidden="true"></i>Links
       </p>
       <TextBubble
         todoTextBubble={`speech-bubble top-speech-bubble link-bubble ${
-          showSettingBubble ? "top-bubble-show" : ""
+          showBubble ? "top-bubble-show" : ""
         }`}
       >
         <p className="links-bubble-content">In Progress</p>

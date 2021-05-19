@@ -1,54 +1,55 @@
-.nameInput{
-    background-color: transparent;
-    text-align: center;
-    outline: none;
-    border: none;
-    font-size: 50px;
-    border-bottom: 2px solid white;
-width: 200px;
+.namefieldContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0px 10px;
+  flex-wrap: wrap;
 }
 
-.nameText{
-    width: auto;
-    font-size: 50px;
-    text-align: center;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
-    min-width: 50px;
+.namefieldContainer input {
+  background-color: transparent;
+  text-align: center;
+  outline: none;
+  border: none;
+  font-size: 50px;
+  border-bottom: 2px solid white;
+  width: 200px;
 }
 
-.greetingText{
-font-size: 50px;
+.nameText {
+  width: auto;
+  font-size: 50px;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+  min-width: 50px;
 }
 
-.nameText:hover{
-    border-bottom: 2px solid white;
+.nameText:hover {
+  border-bottom: 2px solid white;
 }
 
-.nameText-blank{
-    border-bottom: 2px solid white;
-    min-width: 200px;
-    cursor: text;
+.greetingText {
+  font-size: 50px;
 }
 
-.namefieldContainer{
-display: flex;
-justify-content: center;
-padding: 0px 10px;
-flex-wrap: wrap;
+.nameText-blank {
+  border-bottom: 2px solid white;
+  min-width: 200px;
+  cursor: text;
 }
 
 @media screen and (max-width: 600px) {
-    .nameInput, .nameText, .greetingText{
-        font-size: 30px;
-    }
-
-    .nameInput{
-    width: 100px;
-    }
-
-    .nameText-blank{
-        min-width: 100px;
-    }
-    
+  .nameInput,
+  .nameText,
+  .greetingText {
+    font-size: 30px;
   }
+
+  .nameInput {
+    width: 100px;
+  }
+
+  .nameText-blank {
+    min-width: 100px;
+  }
+}
