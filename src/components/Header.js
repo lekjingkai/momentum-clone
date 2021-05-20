@@ -21,18 +21,7 @@ const Header = () => {
 
   const [fetchStatus, setFetchStatus] = useState(true);
 
-  const queryArray = [
-    "ocean",
-    "forest",
-    "beach",
-    "mountain",
-    "frozen",
-    "outdoors",
-    "clouds",
-    "night%20sky",
-    "space",
-    "universe",
-  ];
+  const queryArray = ["ocean", "forest", "beach", "mountain", "frozen", "outdoors", "clouds", "night%20sky", "space", "universe"];
 
   function random_item(items) {
     return items[Math.floor(Math.random() * items.length)];
@@ -40,50 +29,31 @@ const Header = () => {
 
   //fetch image
   const fetchImage = async () => {
-    const res = await fetch(
-      `https://pexelsdimasv1.p.rapidapi.com/v1/search?query=${random_item(
-        queryArray
-      )}&per_page=20&orientation=landscape`,
-      {
-        method: "GET",
-        headers: {
-          authorization: process.env.REACT_APP_PEXELS_KEY,
-          "x-rapidapi-key": process.env.REACT_APP_RAPID_KEY,
-          "x-rapidapi-host": "PexelsdimasV1.p.rapidapi.com",
-        },
-      }
-    );
+    const res = await fetch(`https://pexelsdimasv1.p.rapidapi.com/v1/search?query=${random_item(queryArray)}&per_page=20&orientation=landscape`, {
+      method: "GET",
+      headers: {
+        authorization: process.env.REACT_APP_PEXELS_KEY,
+        "x-rapidapi-key": process.env.REACT_APP_RAPID_KEY,
+        "x-rapidapi-host": "PexelsdimasV1.p.rapidapi.com",
+      },
+    });
     setImageLoading(false);
     const data = await res.json();
-    console.log(data)
-    //if api fetch fails
-    // if(data.hasOwnProperty("error")){
-    //   console.log("dee nusts")
-    // }else{
-    //   console.log("aaa")
-    // }
     return data;
   };
 
   const getImages = async () => {
     const imageFromApi = await fetchImage();
-    // setImageData(imageFromApi);
-    // if (imageFromApi.photos.length > 0) {
-    //   setRandomImageCount(
-    //     Math.floor(Math.random() * imageFromApi.photos.length - 1)
-    //   );
-    // }
-        if (imageFromApi.hasOwnProperty("error")) {
-          console.log("dee nusts");
-        } else {
-          console.log("aaa");
-          setImageData(imageFromApi);
-          if (imageFromApi.photos.length > 0) {
-            setRandomImageCount(
-              Math.floor(Math.random() * imageFromApi.photos.length - 1)
-            );
-          }
-        }
+    //displays the background image from the api or the placeholder image if fetch fails
+    if (imageFromApi.hasOwnProperty("error")) {
+      setFetchStatus(false);
+    } else {
+      setFetchStatus(true);
+      setImageData(imageFromApi);
+      if (imageFromApi.photos.length > 0) {
+        setRandomImageCount(Math.floor(Math.random() * imageFromApi.photos.length - 1));
+      }
+    }
   };
 
   useEffect(() => {
@@ -93,12 +63,22 @@ const Header = () => {
   const leftBottomComponent = (
     <span style={{ display: "flex", width: "100%" }}>
       <Settings></Settings>
-      {imageData && imageData.photos && imageData.photos[randomImageCount] && (
+      {fetchStatus ? (
+        imageData &&
+        imageData.photos &&
+        imageData.photos[randomImageCount] && (
+          <BGCredits
+            author={imageData.photos[randomImageCount].photographer}
+            authorUrl={"https://www.pexels.com/@michael-block-1691617"}
+            url={"https://www.pexels.com/photo/photo-of-stream-during-daytime-3225517/"}
+          />
+        )
+      ) : (
         <BGCredits
-          author={imageData.photos[randomImageCount].photographer}
+          author={"Michael Block"}
           authorUrl={imageData.photos[randomImageCount].photographer_url}
           url={imageData.photos[randomImageCount].url}
-        ></BGCredits>
+        />
       )}
     </span>
   );
@@ -121,7 +101,8 @@ const Header = () => {
       {imageData && (
         <div>
           {imageLoading === false && <div className={`gradient`}></div>}
-          {fetchStatus ? imageData &&
+          {fetchStatus ? (
+            imageData &&
             imageData.photos &&
             imageData.photos[randomImageCount] &&
             imageData.photos[randomImageCount].src && (
@@ -131,14 +112,15 @@ const Header = () => {
                   backgroundImage: `url(${imageData.photos[randomImageCount].src.large2x})`,
                 }}
               ></div>
-            ) : (
-              <div
+            )
+          ) : (
+            <div
               className={`bg-image ${imageLoading ? "" : "fadeInAnim"}`}
               style={{
                 backgroundImage: `url(${require("../assets/placeholder.jpg").default})`,
               }}
             ></div>
-            )}
+          )}
           <Top left={leftTopComponent} right={rightTopComponent} />
           <div className="headerContainer">
             <Clock />
@@ -147,11 +129,7 @@ const Header = () => {
             <MainTitle />
             <MainFocus />
           </div>
-          <Bottom
-            left={leftBottomComponent}
-            center={centerBottomComponent}
-            right={rightBottomComponent}
-          />
+          <Bottom left={leftBottomComponent} center={centerBottomComponent} right={rightBottomComponent} />
         </div>
       )}
     </div>

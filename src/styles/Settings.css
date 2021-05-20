@@ -31,10 +31,10 @@
   animation: rotationSetting 4s infinite linear;
 }
 
-.settingContainer{
+.settingContainer {
   display: flex;
   padding: 5px 0px;
-align-items: center;
+  align-items: center;
 }
 
 .setting-header {
@@ -50,7 +50,7 @@ align-items: center;
   padding: 0px 10px;
 }
 
-.settingContainer input{
+.settingContainer input {
   margin-left: auto;
   padding: 5px 10px;
   border: none;
@@ -61,7 +61,7 @@ align-items: center;
   transition: 0.3s;
 }
 
-.settingContainer input:hover{
+.settingContainer input:hover {
   background-color: #cf333f;
 }
 

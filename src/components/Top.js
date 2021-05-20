@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Top.css";
 
+//container for the top contents i.e header/nav
 const Top = (props) => {
   return (
     <div className="top-row">

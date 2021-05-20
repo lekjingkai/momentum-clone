@@ -43,61 +43,26 @@ const Quote = () => {
       {quoteData && (
         <div className="quoteContainer">
           <div className="blockContainer quoteBlock">
-            <div
-              className="hoverQuote"
-              onMouseOver={() => setHoverQuote(true)}
-              onMouseOut={() => setHoverQuote(false)}
-            >
+            <div className="hoverQuote" onMouseOver={() => setHoverQuote(true)} onMouseOut={() => setHoverQuote(false)}>
               {quoteLoading === true && (
                 <p className="">
                   <i class="fa fa-spinner spinner2 spinLoading" aria-hidden="true"></i>
                 </p>
               )}
-              <p
-                className={`quote ${hoverQuote ? "slideUp" : ""} ${
-                  quoteLoading ? "" : "fadeInAnim"
-                } `}
-              >
-                {quoteLoading === false && (
-                  <p>
-                    "
-                    {quoteData &&
-                      quoteData.content &&
-                      shortQuote(quoteData.content)}
-                    "
-                  </p>
-                )}
+              <p className={`quote ${hoverQuote ? "slideUp" : ""} ${quoteLoading ? "" : "fadeInAnim"} `}>
+                {quoteLoading === false && <p>"{quoteData && quoteData.content && shortQuote(quoteData.content)}"</p>}
               </p>
             </div>
           </div>
           <div>
             <div className="blockContainer authorBlock">
-              <div
-                className="hoverQuote"
-                onMouseOver={() => setHoverQuote(true)}
-                onMouseOut={() => setHoverQuote(false)}
-              >
-                <div
-                  className={`author ${hoverQuote ? "slideDownFadeIn" : ""} ${
-                    quoteLoading ? "notLoaded" : ""
-                  }`}
-                >
-                  <span
-                    className={`${hoverQuote ? "TextSlideDownFadeIn" : ""}`}
-                  >
-                    {quoteData &&
-                      quoteData.originator &&
-                      quoteData.originator.name}
+              <div className="hoverQuote" onMouseOver={() => setHoverQuote(true)} onMouseOut={() => setHoverQuote(false)}>
+                <div className={`author ${hoverQuote ? "slideDownFadeIn" : ""} ${quoteLoading ? "notLoaded" : ""}`}>
+                  <span className={`${hoverQuote ? "TextSlideDownFadeIn" : ""}`}>
+                    {quoteData && quoteData.originator && quoteData.originator.name}
                   </span>
-                  <a href={quoteData.url} className={`${
-                    quoteLoading ? "notLoaded" : ""
-                  }`}>
-                    <i
-                      class={`fa fa-external-link ${
-                        hoverQuote ? "TextSlideDownFadeIn" : ""
-                      }`}
-                      aria-hidden="true"
-                    ></i>
+                  <a href={quoteData.url} className={`${quoteLoading ? "notLoaded" : ""}`}>
+                    <i class={`fa fa-external-link ${hoverQuote ? "TextSlideDownFadeIn" : ""}`} aria-hidden="true"></i>
                   </a>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from "react";
+import { useState } from "react";
 import "../styles/Search.css";
 
 const Search = () => {
@@ -34,9 +34,7 @@ const Search = () => {
       >
         <label>
           <i
-            className={`fa fa-search searchIcon ${
-              searchHover ? "searchIconFocus" : ""
-            } ${searchFocus ? "searchIconFocus" : ""}`}
+            className={`fa fa-search searchIcon ${searchHover ? "searchIconFocus" : ""} ${searchFocus ? "searchIconFocus" : ""}`}
             aria-hidden="true"
           ></i>
           <input
@@ -47,12 +45,7 @@ const Search = () => {
             onFocus={() => setSearchFocus(true)}
             onBlur={() => setSearchFocus(false)}
           />
-          <i
-            className={`fa fa-google searchIcon ${
-              searchFocus ? "searchIconFocus" : ""
-            }`}
-            aria-hidden="true"
-          ></i>
+          <i className={`fa fa-google searchIcon ${searchFocus ? "searchIconFocus" : ""}`} aria-hidden="true"></i>
         </label>
       </form>
     </div>

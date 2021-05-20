@@ -4,17 +4,15 @@ import PropTypes from "prop-types";
 
 const BGCredits = (props) => {
   return (
-      <div className="BGCreditsContainer">
-        <p>Photo by</p>
-        <div className="BGauthorContainer">
-          <a href={props.authorUrl}>
-            {props.author}
-          </a>
-          <a href={props.url}>
-            <i class="fa fa-external-link" aria-hidden="true"></i>
-          </a>
-        </div>
+    <div className="BGCreditsContainer">
+      <p>Photo by</p>
+      <div className="BGauthorContainer">
+        <a href={props.authorUrl}>{props.author}</a>
+        <a href={props.url}>
+          <i class="fa fa-external-link" aria-hidden="true"></i>
+        </a>
       </div>
+    </div>
   );
 };
 

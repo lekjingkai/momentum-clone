@@ -19,9 +19,7 @@ const Links = () => {
     }
   };
 
-  const [links, setLinks] = useState(
-    checkLSLinks(localStorage.getItem("links"))
-  );
+  const [links, setLinks] = useState(checkLSLinks(localStorage.getItem("links")));
 
   const ref = useRef(null);
 
@@ -44,10 +42,7 @@ const Links = () => {
     return (
       <div className="link">
         <a href={link.link} className={`link-content`}>
-          <i
-            class="fa fa-external-link-square link-content"
-            aria-hidden="true"
-          ></i>
+          <i class="fa fa-external-link-square link-content" aria-hidden="true"></i>
           {link.name}
         </a>
         <button onClick={() => removeLink(index)}>
@@ -99,10 +94,7 @@ const Links = () => {
     };
 
     return (
-      <form
-        className={`linkForm ${showLinkForm ? "linkForm-show" : ""}`}
-        onSubmit={handleSubmit}
-      >
+      <form className={`linkForm ${showLinkForm ? "linkForm-show" : ""}`} onSubmit={handleSubmit}>
         <input
           ref={(input) => {
             focusInput = input;
@@ -113,18 +105,8 @@ const Links = () => {
           placeholder="Name"
           onChange={(e) => setLinkName(e.target.value)}
         />
-        <input
-          type="text"
-          className="link-input link-content"
-          value={linkValue}
-          placeholder="Link"
-          onChange={(e) => setLinkValue(e.target.value)}
-        />
-        <input
-          className="link-submit-btn"
-          type="submit"
-          value="Add Link"
-        ></input>
+        <input type="text" className="link-input link-content" value={linkValue} placeholder="Link" onChange={(e) => setLinkValue(e.target.value)} />
+        <input className="link-submit-btn" type="submit" value="Add Link"></input>
       </form>
     );
   }
@@ -139,31 +121,17 @@ const Links = () => {
       <p className="links-btn" onClick={() => setShowBubble(!showBubble)}>
         <i class="fa fa-link" aria-hidden="true"></i>Links
       </p>
-      <TextBubble
-        bubbleClassName={`speech-bubble top-speech-bubble link-bubble ${
-          showBubble ? "top-bubble-show" : ""
-        }`}
-      >
+      <TextBubble bubbleClassName={`speech-bubble top-speech-bubble link-bubble ${showBubble ? "top-bubble-show" : ""}`}>
         <div>
           <div className="link-header">
             <h3 className="link-content">
               Saved Links
-              <i
-                class="fa fa-external-link link-content"
-                aria-hidden="true"
-              ></i>
+              <i class="fa fa-external-link link-content" aria-hidden="true"></i>
             </h3>
           </div>
           <div className="link-list">
             {links.length > 0 ? (
-              links.map((link, index) => (
-                <Link
-                  key={index}
-                  index={index}
-                  link={link}
-                  removeLink={removeLink}
-                />
-              ))
+              links.map((link, index) => <Link key={index} index={index} link={link} removeLink={removeLink} />)
             ) : (
               <div className="no-link-container">
                 <p className="link-content">Add a link to get started</p>
@@ -172,16 +140,8 @@ const Links = () => {
                 </button>
               </div>
             )}
-            <button
-              className="show-hide-addlink-btn link-content"
-              onClick={() => setShowLinkForm(!showLinkForm)}
-            >
-              <i
-                class={`fa ${
-                  showLinkForm ? "fa-minus" : "fa-plus"
-                } link-content`}
-                aria-hidden="true"
-              ></i>
+            <button className="show-hide-addlink-btn link-content" onClick={() => setShowLinkForm(!showLinkForm)}>
+              <i class={`fa ${showLinkForm ? "fa-minus" : "fa-plus"} link-content`} aria-hidden="true"></i>
               {showLinkForm ? "Close" : "Open"}
             </button>
             <LinkForm addLink={addLink} />

@@ -47,11 +47,7 @@ const Settings = () => {
       >
         <i class="fa fa-cog" aria-hidden="true"></i>
       </p>
-      <TextBubble
-        bubbleClassName={`speech-bubble bottom-speech-bubble setting-bubble ${
-          showBubble ? "bottom-bubble-show" : ""
-        }`}
-      >
+      <TextBubble bubbleClassName={`speech-bubble bottom-speech-bubble setting-bubble ${showBubble ? "bottom-bubble-show" : ""}`}>
         <div>
           <div className="setting-header">
             <h3 className="setting-content">
@@ -62,27 +58,15 @@ const Settings = () => {
           <form>
             <div className="settingContainer">
               <p className="setting-content">Clear all your links</p>
-              <input
-                onClick={() => clearData(0)}
-                type="submit"
-                value="Clear"
-              ></input>
+              <input onClick={() => clearData(0)} type="submit" value="Clear"></input>
             </div>
             <div className="settingContainer">
               <p className="setting-content">Clear all your todos</p>
-              <input
-                onClick={() => clearData(1)}
-                type="submit"
-                value="Clear"
-              ></input>
+              <input onClick={() => clearData(1)} type="submit" value="Clear"></input>
             </div>
             <div className="settingContainer">
               <p className="setting-content">Clear all your data</p>
-              <input
-                onClick={() => clearData(2)}
-                type="submit"
-                value="Clear"
-              ></input>
+              <input onClick={() => clearData(2)} type="submit" value="Clear"></input>
             </div>
           </form>
         </div>

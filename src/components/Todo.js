@@ -23,10 +23,7 @@ const Todo = () => {
   const [todos, setTodos] = useState(checkLSTodo(localStorage.getItem("todo")));
 
   useEffect(() => {
-    if (
-      localStorage.getItem("todo") !== null &&
-      localStorage.getItem("todo") !== "[]"
-    ) {
+    if (localStorage.getItem("todo") !== null && localStorage.getItem("todo") !== "[]") {
       setShowBubble(true);
     }
   }, []);
@@ -35,21 +32,10 @@ const Todo = () => {
     return (
       <div className="todo">
         <label className={`todo-checkmarkContainer`}>
-          <input
-            id="myCheck"
-            type="checkbox"
-            checked={changeChecked(index)}
-            onClick={() => completeTodo(index)}
-          />
+          <input id="myCheck" type="checkbox" checked={changeChecked(index)} onClick={() => completeTodo(index)} />
           <span className="todo-checkmark"></span>
         </label>
-        <p
-          className={`todo-content ${
-            todo.isCompleted ? "todo-text-completed" : ""
-          }`}
-        >
-          {todo.text}
-        </p>
+        <p className={`todo-content ${todo.isCompleted ? "todo-text-completed" : ""}`}>{todo.text}</p>
         <button onClick={() => removeTodo(index)}>
           <i class="fa fa-trash todo-content" aria-hidden="true"></i>
         </button>
@@ -114,11 +100,7 @@ const Todo = () => {
       <p className="todo-btn" onClick={() => setShowBubble(!showBubble)}>
         <i class="fa fa-list-ul" aria-hidden="true"></i> Todo
       </p>
-      <TextBubble
-        bubbleClassName={`speech-bubble bottom-speech-bubble todo-bubble ${
-          showBubble ? "bottom-bubble-show" : ""
-        }`}
-      >
+      <TextBubble bubbleClassName={`speech-bubble bottom-speech-bubble todo-bubble ${showBubble ? "bottom-bubble-show" : ""}`}>
         <div>
           <div className="todo-header">
             <h3 className="todo-content">
@@ -127,22 +109,11 @@ const Todo = () => {
           </div>
           <div className="todo-list">
             {todos.length > 0 ? (
-              todos.map((todo, index) => (
-                <Todo
-                  key={index}
-                  index={index}
-                  todo={todo}
-                  completeTodo={completeTodo}
-                  removeTodo={removeTodo}
-                />
-              ))
+              todos.map((todo, index) => <Todo key={index} index={index} todo={todo} completeTodo={completeTodo} removeTodo={removeTodo} />)
             ) : (
               <div className="no-todo-container">
                 <p className="todo-content">Add a todo to get started</p>
-                <button
-                  className="no-todo-btn"
-                  onClick={() => focusInput.focus()}
-                >
+                <button className="no-todo-btn" onClick={() => focusInput.focus()}>
                   New Todo
                 </button>
               </div>

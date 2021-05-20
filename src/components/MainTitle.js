@@ -4,9 +4,7 @@ import { useState, useEffect } from "react";
 import { CurrentHour } from "./TimeFunction";
 
 const MainTitle = () => {
-  const [firstName, setFirstName] = useState(
-    localStorage.getItem("name") || ""
-  );
+  const [firstName, setFirstName] = useState(localStorage.getItem("name") || "");
   const [firstNameInput, setFirstNameInput] = useState(false);
   const [greeting, setGreeting] = useState("");
 

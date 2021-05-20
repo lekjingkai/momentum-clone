@@ -13,7 +13,6 @@
   font-size: 50px;
   border-bottom: 2px solid white;
   width: 200px;
-
 }
 
 .nameText {
@@ -23,7 +22,6 @@
   border-bottom: 2px solid transparent;
   transition: 0.3s;
   min-width: 50px;
-
 }
 
 .nameText:hover {
@@ -47,9 +45,8 @@
     font-size: 40px;
   }
 
-  
-  .namefieldContainer input{
-    width:150px;
+  .namefieldContainer input {
+    width: 150px;
   }
 
   .nameInput {
@@ -61,7 +58,6 @@
   }
 }
 
-
 @media screen and (max-width: 600px) {
   .nameText,
   .greetingText,
@@ -69,8 +65,8 @@
     font-size: 25px;
   }
 
-  .namefieldContainer input{
-    width:100px;
+  .namefieldContainer input {
+    width: 100px;
   }
 
   .nameInput {

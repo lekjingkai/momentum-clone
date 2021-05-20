@@ -19,11 +19,7 @@ const Weather = () => {
         const data = await response.json();
         setWeatherData(data);
 
-        data &&
-          data.weather &&
-          setWeatherIcon(
-            require(`../assets/${data.weather[0].icon}.png`).default
-          );
+        data && data.weather && setWeatherIcon(require(`../assets/${data.weather[0].icon}.png`).default);
       }, showError);
     } else {
       setErrorMsg("Geolocation is not supported by this browser.");
@@ -60,18 +56,8 @@ const Weather = () => {
       {weatherData && (
         <div className="weather-main">
           <div className="weather-header">
-            {weatherData.weather && (
-              <img
-                src={weatherIcon}
-                alt="weather status icon"
-                className="weather-icon"
-              />
-            )}
-            {weatherData.main && (
-              <h2 className="temp">
-                {kelvinToFarenheit(weatherData.main.temp)}&deg; C
-              </h2>
-            )}
+            {weatherData.weather && <img src={weatherIcon} alt="weather status icon" className="weather-icon" />}
+            {weatherData.main && <h2 className="temp">{kelvinToFarenheit(weatherData.main.temp)}&deg; C</h2>}
           </div>
           <p className="weatherText">{weatherData.name}</p>
         </div>

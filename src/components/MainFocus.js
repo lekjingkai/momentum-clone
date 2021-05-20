@@ -22,9 +22,7 @@ const MainFocus = () => {
     }
   };
 
-  const [title, setTitle] = useState(
-    checkLSGoal(localStorage.getItem("todaygoal"))
-  );
+  const [title, setTitle] = useState(checkLSGoal(localStorage.getItem("todaygoal")));
 
   useEffect(() => {
     //check localstorage if goal has been entered but not cleared
@@ -84,11 +82,7 @@ const MainFocus = () => {
       {selected === false && (
         <div className={`${fade ? "fadeOutAnim" : "fadeInAnim"}`}>
           <p>What is your main focus for today?</p>
-          <input
-            onChange={(event) => setTitle(event.target.value)}
-            onKeyPress={enterGoal}
-            disabled={disableInput}
-          ></input>
+          <input onChange={(event) => setTitle(event.target.value)} onKeyPress={enterGoal} disabled={disableInput}></input>
         </div>
       )}
       {selected === true && (
@@ -99,29 +93,16 @@ const MainFocus = () => {
         >
           <p>Today's Goal</p>
           <div className="todayGoalContainer">
-            <label
-              className={`checkmarkContainer ${fadeGoalHover ? "fadeIn" : ""}`}
-            >
+            <label className={`checkmarkContainer ${fadeGoalHover ? "fadeIn" : ""}`}>
               <input type="checkbox" onClick={completeGoal} />
               <span class="checkmark"></span>
             </label>
-            <p
-              className={`goalText ${todayGoal ? "strikethroughGoalText" : ""}`}
-            >
-              {title}
-            </p>
-            <button
-              className={`cancelBtn ${todayGoal ? "rotate" : ""} ${
-                fadeGoalHover ? "fadeIn" : ""
-              }`}
-              onClick={closeGoal}
-            >
-<i class="fa fa-times" aria-hidden="true"></i>
+            <p className={`goalText ${todayGoal ? "strikethroughGoalText" : ""}`}>{title}</p>
+            <button className={`cancelBtn ${todayGoal ? "rotate" : ""} ${fadeGoalHover ? "fadeIn" : ""}`} onClick={closeGoal}>
+              <i class="fa fa-times" aria-hidden="true"></i>
             </button>
           </div>
-          <p className={`goalSuccessText ${todayGoal ? "fadeInOutAnim" : ""}`}>
-            Nicely done!
-          </p>
+          <p className={`goalSuccessText ${todayGoal ? "fadeInOutAnim" : ""}`}>Nicely done!</p>
         </div>
       )}
     </div>

@@ -14,8 +14,8 @@
 .quoteBlock {
   max-width: 60%;
   width: 60%;
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .authorBlock {
@@ -77,7 +77,6 @@ justify-content: center;
   opacity: 0;
   visibility: none;
 }
-
 
 @keyframes rotationSetting {
   from {
