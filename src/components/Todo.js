@@ -11,6 +11,7 @@ const Todo = () => {
 
   let focusInput = null;
 
+  //check if localstorage item exists
   const checkLSTodo = (e) => {
     if (e === null) {
       return [];
@@ -23,11 +24,13 @@ const Todo = () => {
   const [todos, setTodos] = useState(checkLSTodo(localStorage.getItem("todo")));
 
   useEffect(() => {
+    //check if todo item exist and if yes opens up the bubble immediately on next page load
     if (localStorage.getItem("todo") !== null && localStorage.getItem("todo") !== "[]") {
       setShowBubble(true);
     }
   }, []);
 
+  //displays checkbox, todo name and delete button
   function Todo({ todo, index, completeTodo, removeTodo }) {
     return (
       <div className="todo">
@@ -43,6 +46,7 @@ const Todo = () => {
     );
   }
 
+  //changes the checkbox value
   const changeChecked = (index) => {
     const newTodos = [...todos];
     return newTodos[index].isCompleted;
@@ -69,6 +73,7 @@ const Todo = () => {
     localStorage.setItem("todo", JSON.stringify(newTodos));
   };
 
+  //todo form for adding todo
   function TodoForm({ addTodo }) {
     const [value, setValue] = useState("");
 

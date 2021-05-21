@@ -29,7 +29,7 @@ const NameField = (props) => {
           <input value={props.value} onChange={props.inputChange} onKeyPress={handleKeyPress} onBlur={props.blur} autoFocus />
         </div>
       ) : (
-        <div onDoubleClick={props.doubleClick} className={`nameText ${nameBlank ? "nameText-blank" : ""}`}>
+        <div onClick={props.doubleClick} className={`nameText ${nameBlank ? "nameText-blank" : ""}`}>
           {props.value}
         </div>
       )}

@@ -23,6 +23,7 @@ const Settings = () => {
     };
   });
 
+  //clears localstorage data based on option pressed in settings
   const clearData = (clearOption) => {
     console.log("help pls" + clearOption);
     switch (clearOption) {

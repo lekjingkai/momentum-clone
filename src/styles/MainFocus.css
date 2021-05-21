@@ -1,6 +1,7 @@
 .mainFocusContainer {
   margin-top: 50px;
   font-size: 40px;
+  height: 130px;
 }
 
 .mainFocusContainer input {
@@ -17,12 +18,11 @@
 .todayGoalContainer {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
 }
 
 .cancelBtn {
-  margin: 0 10px;
+  margin-left: 10px;
   padding: 8px 10px;
   background-color: transparent;
   border-radius: 50%;
@@ -141,11 +141,20 @@
     visibility: visible;
     opacity: 1;
   }
+
+  .mainFocusContainer {
+    margin-top: 20px;
+  }
+
+  .goalSuccessText {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-height: 600px) {
   .mainFocusContainer {
-    margin-top: 20px;
+    margin-top: 10px;
+    height: 80px;
   }
 
   .mainFocusContainer,
@@ -157,5 +166,9 @@
   .checkmarkContainer {
     visibility: visible;
     opacity: 1;
+  }
+
+  .goalSuccessText {
+    font-size: 15px;
   }
 }

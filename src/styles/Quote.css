@@ -31,6 +31,7 @@
   margin-bottom: 0px;
   transition: 0.3s;
   padding: 5px 5px 0px 5px;
+  -webkit-text-size-adjust: 100%;
 }
 
 .slideUp {
@@ -113,11 +114,47 @@
   .author {
     opacity: 1;
     visibility: visible;
+    font-size: 12px;
   }
 
   .quoteBlock {
     width: 100%;
     max-width: 100%;
+  }
+
+  .authorBlock {
+    transform: translate(-50%);
+  }
+
+  .TextSlideDownFadeIn {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .slideUp {
+    transform: none;
+  }
+
+  .slideDownFadeIn {
+    transform: none;
+  }
+
+  .quote {
+    font-size: 11px;
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+
+  .author {
+    opacity: 1;
+    visibility: visible;
+    font-size: 11px;
+  }
+
+  .quoteBlock {
+    width: 60%;
+    max-width: 60%;
   }
 
   .authorBlock {

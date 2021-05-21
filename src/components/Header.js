@@ -122,14 +122,12 @@ const Header = () => {
             ></div>
           )}
           <Top left={leftTopComponent} right={rightTopComponent} />
-          <div className="clockContainer">
+          <div className="body-container">
             <Clock />
-            <MainTitle />
-            <MainFocus />
-          </div>
-          <div className="middleContainer">
-            {/* <MainTitle />
-            <MainFocus /> */}
+            <div className="subbody-container">
+              <MainTitle />
+              <MainFocus />
+            </div>
           </div>
           <Bottom left={leftBottomComponent} center={centerBottomComponent} right={rightBottomComponent} />
         </div>

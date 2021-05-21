@@ -6,12 +6,12 @@
 
 @media screen and (max-width: 600px) {
   .clock {
-    font-size: 8em;
+    font-size: 7em;
   }
 }
 
 @media screen and (max-height: 600px) {
   .clock {
-    font-size: 6em;
+    font-size: 7em;
   }
 }

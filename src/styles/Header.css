@@ -1,19 +1,14 @@
-.clockContainer {
+.body-container {
   text-align: center;
-  padding: 20px 20px 20px 20px;
   position: absolute;
   top: 60%;
   transform: translateY(-50%);
   width: 100%;
   transition: 0.3s;
+  z-index: 1;
 }
 
-.middleContainer {
-  position: absolute;
-  width: 100%;
-  top: 57%;
-}
-
+/* Gradient to add a dark overlay to text readability */
 .gradient {
   position: absolute;
   width: 100%;
@@ -23,6 +18,7 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
+/* background image  */
 .bg-image {
   width: 100vw;
   max-width: 100%;
@@ -38,21 +34,21 @@
 }
 
 @media screen and (max-width: 600px) {
-  .clockContainer {
-    top: 230px;
-  }
-
-  .middleContainer {
+  .body-container {
     top: 250px;
   }
 }
 
 @media screen and (max-height: 600px) {
-  .clockContainer {
-    top: 130px;
+  .body-container {
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
-  .middleContainer {
-    top: 170px;
+  .subbody-container {
+    width: 350px;
   }
 }

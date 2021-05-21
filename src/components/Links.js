@@ -42,7 +42,7 @@ const Links = () => {
     return (
       <div className="link">
         <a href={link.link} className={`link-content`}>
-          <i class="fa fa-external-link-square link-content" aria-hidden="true"></i>
+          <i class="fa fa-globe link-content" aria-hidden="true"></i>
           {link.name}
         </a>
         <button onClick={() => removeLink(index)}>
