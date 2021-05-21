@@ -7,10 +7,11 @@ const Weather = () => {
   const [weatherData, setWeatherData] = useState([]);
   const [weatherIcon, setWeatherIcon] = useState("");
 
+  //gets the current location from geolocation and uses the lat and lon values as parameters for obtaining weather data
   const getWeather = async () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(async (position) => {
-        let latitude = position.coords.latitude.toFixed(4); //save lat and lon from above API call
+        let latitude = position.coords.latitude.toFixed(4);
         let longitude = position.coords.longitude.toFixed(4);
 
         const response = await fetch(

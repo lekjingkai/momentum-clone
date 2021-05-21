@@ -1,6 +1,7 @@
 .namefieldContainer {
   display: flex;
   justify-content: center;
+  margin-top: -25px;
   padding: 0px 10px;
   flex-wrap: wrap;
 }
@@ -59,6 +60,27 @@
 }
 
 @media screen and (max-width: 600px) {
+  .nameText,
+  .greetingText,
+  .namefieldContainer input {
+    font-size: 25px;
+  }
+
+  .namefieldContainer input {
+    width: 100px;
+  }
+
+  .nameInput {
+    width: 100px;
+  }
+
+  .nameText-blank {
+    min-width: 100px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-height: 600px) {
   .nameText,
   .greetingText,
   .namefieldContainer input {

@@ -142,3 +142,20 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-height: 600px) {
+  .mainFocusContainer {
+    margin-top: 20px;
+  }
+
+  .mainFocusContainer,
+  .mainFocusContainer input {
+    font-size: 20px;
+  }
+
+  .cancelBtn,
+  .checkmarkContainer {
+    visibility: visible;
+    opacity: 1;
+  }
+}

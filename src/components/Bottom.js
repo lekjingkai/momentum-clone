@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Bottom.css";
 
+//container for the bottom contents i.e footer
 const Bottom = (props) => {
   return (
     <div className="bottom-row">

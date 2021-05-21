@@ -9,3 +9,9 @@
     font-size: 8em;
   }
 }
+
+@media screen and (max-height: 600px) {
+  .clock {
+    font-size: 6em;
+  }
+}
