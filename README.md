@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Momentum Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The is a React-based project I took up to learn React JS as well as further improving on my HTML, CSS and Javascript skills.
 
-In the project directory, you can run:
+You can visit it at https://lekjingkai.github.io/momentum-clone/
 
-### `npm start`
+This project is based on the Google Chrome browser extension called Momentum (https://momentumdash.com/). It's a custom home page that replaces new tabs and the home page with a personal productivty app that provides a personal space where you can have main goal, a todo app, store links and a weather app. The purpose of this app is to increase productivty and beat procastination with todo reminders. One touch I added is adding a mobile view for the app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The purpose of this project is to create a clone of the Momentum app with the following features:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+• Keep track of all your tasks with todo app
 
-### `npm test`
+• A bookmark app to add and store your favourite links.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+• Check the time
 
-### `npm run build`
+• Add a main focus goal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+• Google search
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+• Check the current weather based on your location
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+• A quote and image on each load
 
-### `npm run eject`
+# Built with:
+• [Create React App](https://github.com/facebook/create-react-app)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Node.js is needed to run the Momentum Clone app.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installing
+Clone the project and use 'npm install' and use 'npm start' to start the server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# API used:
+RapidAPI-Pexels  
+RapidAPI-Quotes  
+RapidAPI-OpenWeather  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Screenshots
 
-## Learn More
+Attached below are the images of the app:
+![momentum_screenshot_1](https://user-images.githubusercontent.com/53485796/119124017-c7686100-ba62-11eb-9902-753db62e345c.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can add your name and enter a main focus 
+![momentum_screenshot_2](https://user-images.githubusercontent.com/53485796/119124247-0991a280-ba63-11eb-9c92-a01cb9535e9a.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can store saved links and add todos
+![momentum_screenshot_3](https://user-images.githubusercontent.com/53485796/119124254-0b5b6600-ba63-11eb-82ce-a002ad68cbce.png)
 
-### Code Splitting
+Horizontal Mobile View
+![momentum_screenshot_4](https://user-images.githubusercontent.com/53485796/119126811-1c59a680-ba66-11eb-9e77-82ded4531f05.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Vertical Mobile View  
+![momentum_screenshot_5](https://user-images.githubusercontent.com/53485796/119126815-1d8ad380-ba66-11eb-8fce-c9c0e476424f.png)
 
-### Analyzing the Bundle Size
+# Acknowledgements
+Placeholder Photo by [Michael Block](https://www.pexels.com/@michael-block-1691617) (https://www.pexels.com/photo/photo-of-stream-during-daytime-3225517/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
