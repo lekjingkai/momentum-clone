@@ -42,11 +42,11 @@ const Links = () => {
     return (
       <div className="link">
         <a href={link.link} className={`link-content`}>
-          <i class="fa fa-globe link-content" aria-hidden="true"></i>
+          <i className="fa fa-globe link-content" aria-hidden="true"></i>
           {link.name}
         </a>
         <button onClick={() => removeLink(index)}>
-          <i class="fa fa-trash link-content" aria-hidden="true"></i>
+          <i className="fa fa-trash link-content" aria-hidden="true"></i>
         </button>
       </div>
     );
@@ -71,7 +71,7 @@ const Links = () => {
     const [linkValue, setLinkValue] = useState("");
 
     const checkURL = (url) => {
-      if (url == "") {
+      if (url === "") {
         return false;
       } else {
         const requirement = /^(http|https):\/\//;
@@ -119,14 +119,14 @@ const Links = () => {
   return (
     <div ref={ref} className="linksContainer">
       <p className="links-btn" onClick={() => setShowBubble(!showBubble)}>
-        <i class="fa fa-link" aria-hidden="true"></i>Links
+        <i className="fa fa-link" aria-hidden="true"></i>Links
       </p>
       <TextBubble bubbleClassName={`speech-bubble top-speech-bubble link-bubble ${showBubble ? "top-bubble-show" : ""}`}>
         <div>
           <div className="link-header">
             <h3 className="link-content">
               Saved Links
-              <i class="fa fa-external-link link-content" aria-hidden="true"></i>
+              <i className="fa fa-external-link link-content" aria-hidden="true"></i>
             </h3>
           </div>
           <div className="link-list">
@@ -141,7 +141,7 @@ const Links = () => {
               </div>
             )}
             <button className="show-hide-addlink-btn link-content" onClick={() => setShowLinkForm(!showLinkForm)}>
-              <i class={`fa ${showLinkForm ? "fa-minus" : "fa-plus"} link-content`} aria-hidden="true"></i>
+              <i className={`fa ${showLinkForm ? "fa-minus" : "fa-plus"} link-content`} aria-hidden="true"></i>
               {showLinkForm ? "Close" : "Open"}
             </button>
             <LinkForm addLink={addLink} />

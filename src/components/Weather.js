@@ -40,6 +40,8 @@ const Weather = () => {
         case error.UNKNOWN_ERROR:
           setErrorMsg("An unknown error occurred.");
           break;
+        default:
+          setErrorMsg("An unknown error occurred.");
       }
     }
   };

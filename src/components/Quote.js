@@ -46,12 +46,12 @@ const Quote = () => {
             <div className="hoverQuote" onMouseOver={() => setHoverQuote(true)} onMouseOut={() => setHoverQuote(false)}>
               {quoteLoading === true && (
                 <p className="">
-                  <i class="fa fa-spinner spinner2 spinLoading" aria-hidden="true"></i>
+                  <i className="fa fa-spinner spinner2 spinLoading" aria-hidden="true"></i>
                 </p>
               )}
-              <p className={`quote ${hoverQuote ? "slideUp" : ""} ${quoteLoading ? "" : "fadeInAnim"} `}>
+              <div className={`quote ${hoverQuote ? "slideUp" : ""} ${quoteLoading ? "" : "fadeInAnim"} `}>
                 {quoteLoading === false && <p>"{quoteData && quoteData.content && shortQuote(quoteData.content)}"</p>}
-              </p>
+              </div>
             </div>
           </div>
           <div>
@@ -62,7 +62,7 @@ const Quote = () => {
                     {quoteData && quoteData.originator && quoteData.originator.name}
                   </span>
                   <a href={quoteData.url} className={`${quoteLoading ? "notLoaded" : ""}`}>
-                    <i class={`fa fa-external-link ${hoverQuote ? "TextSlideDownFadeIn" : ""}`} aria-hidden="true"></i>
+                    <i className={`fa fa-external-link ${hoverQuote ? "TextSlideDownFadeIn" : ""}`} aria-hidden="true"></i>
                   </a>
                 </div>
               </div>

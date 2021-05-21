@@ -19,7 +19,7 @@ const MainTitle = () => {
     } else {
       setGreeting("Good Evening");
     }
-  });
+  }, [hour]);
 
   //set the localstorage name on name change
   useEffect(() => {

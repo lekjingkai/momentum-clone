@@ -40,7 +40,7 @@ const Todo = () => {
         </label>
         <p className={`todo-content ${todo.isCompleted ? "todo-text-completed" : ""}`}>{todo.text}</p>
         <button onClick={() => removeTodo(index)}>
-          <i class="fa fa-trash todo-content" aria-hidden="true"></i>
+          <i className="fa fa-trash todo-content" aria-hidden="true"></i>
         </button>
       </div>
     );
@@ -103,13 +103,13 @@ const Todo = () => {
   return (
     <div className="todoContainer">
       <p className="todo-btn" onClick={() => setShowBubble(!showBubble)}>
-        <i class="fa fa-list-ul" aria-hidden="true"></i> Todo
+        <i className="fa fa-list-ul" aria-hidden="true"></i> Todo
       </p>
       <TextBubble bubbleClassName={`speech-bubble bottom-speech-bubble todo-bubble ${showBubble ? "bottom-bubble-show" : ""}`}>
         <div>
           <div className="todo-header">
             <h3 className="todo-content">
-              Todo<i class="fa fa-pencil todo-content" aria-hidden="true"></i>
+              Todo<i className="fa fa-pencil todo-content" aria-hidden="true"></i>
             </h3>
           </div>
           <div className="todo-list">

@@ -25,13 +25,13 @@ const MainFocus = () => {
   const [title, setTitle] = useState(checkLSGoal(localStorage.getItem("todaygoal")));
 
   useEffect(() => {
-    //check localstorage if goal has been entered but not cleared
+    // check localstorage if goal has been entered but not cleared
     if (checkLSGoal(localStorage.getItem("todaygoal")) !== "") {
-      if (JSON.parse(localStorage.getItem("todaygoal")).cleared == false) {
-        setDisableInput(!disableInput);
-        setFade(!fade);
+      if (JSON.parse(localStorage.getItem("todaygoal")).cleared === false) {
+        setDisableInput((state) => !state);
+        setFade((state) => !state);
         setTimeout(() => {
-          setSelected(!selected);
+          setSelected((state) => !state);
         }, fadeDuration);
       }
     }
@@ -62,7 +62,7 @@ const MainFocus = () => {
   //captures the input value and change to the current goal
   const enterGoal = (event) => {
     if (event.key === "Enter") {
-      if (title != "") {
+      if (title !== "") {
         setDisableInput(!disableInput);
         setFade(!fade);
         const LSgoal = {

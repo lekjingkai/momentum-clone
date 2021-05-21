@@ -21,42 +21,43 @@ const Header = () => {
 
   const [fetchStatus, setFetchStatus] = useState(true);
 
-  const queryArray = ["ocean", "forest", "beach", "mountain", "frozen", "outdoors", "clouds", "night%20sky", "space", "universe"];
-
   function random_item(items) {
     return items[Math.floor(Math.random() * items.length)];
   }
 
   //fetch image
-  const fetchImage = async () => {
-    const res = await fetch(`https://pexelsdimasv1.p.rapidapi.com/v1/search?query=${random_item(queryArray)}&per_page=20&orientation=landscape`, {
-      method: "GET",
-      headers: {
-        authorization: process.env.REACT_APP_PEXELS_KEY,
-        "x-rapidapi-key": process.env.REACT_APP_RAPID_KEY,
-        "x-rapidapi-host": "PexelsdimasV1.p.rapidapi.com",
-      },
-    });
-    setImageLoading(false);
-    const data = await res.json();
-    return data;
-  };
-
-  const getImages = async () => {
-    const imageFromApi = await fetchImage();
-    //displays the background image from the api or the placeholder image if fetch fails
-    if (imageFromApi.hasOwnProperty("error")) {
-      setFetchStatus(false);
-    } else {
-      setFetchStatus(true);
-      setImageData(imageFromApi);
-      if (imageFromApi.photos.length > 0) {
-        setRandomImageCount(Math.floor(Math.random() * imageFromApi.photos.length - 1));
-      }
-    }
-  };
 
   useEffect(() => {
+    const queryArray = ["ocean", "forest", "beach", "mountain", "frozen", "outdoors", "clouds", "night%20sky", "space", "universe"];
+
+    const fetchImage = async () => {
+      const res = await fetch(`https://pexelsdimasv1.p.rapidapi.com/v1/search?query=${random_item(queryArray)}&per_page=20&orientation=landscape`, {
+        method: "GET",
+        headers: {
+          authorization: process.env.REACT_APP_PEXELS_KEY,
+          "x-rapidapi-key": process.env.REACT_APP_RAPID_KEY,
+          "x-rapidapi-host": "PexelsdimasV1.p.rapidapi.com",
+        },
+      });
+      setImageLoading(false);
+      const data = await res.json();
+      return data;
+    };
+
+    const getImages = async () => {
+      const imageFromApi = await fetchImage();
+      //displays the background image from the api or the placeholder image if fetch fails
+      if (imageFromApi.hasOwnProperty("error")) {
+        setFetchStatus(false);
+      } else {
+        setFetchStatus(true);
+        setImageData(imageFromApi);
+        if (imageFromApi.photos.length > 0) {
+          setRandomImageCount(Math.floor(Math.random() * imageFromApi.photos.length - 1));
+        }
+      }
+    };
+
     getImages();
   }, []);
 

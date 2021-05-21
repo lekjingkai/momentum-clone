@@ -35,6 +35,9 @@ const Settings = () => {
         break;
       case 2:
         localStorage.clear();
+        break;
+      default:
+        console.log("Error");
     }
   };
 
@@ -46,14 +49,14 @@ const Settings = () => {
         onMouseOut={() => sethoverRotate(false)}
         onClick={() => setShowBubble(!showBubble)}
       >
-        <i class="fa fa-cog" aria-hidden="true"></i>
+        <i className="fa fa-cog" aria-hidden="true"></i>
       </p>
       <TextBubble bubbleClassName={`speech-bubble bottom-speech-bubble setting-bubble ${showBubble ? "bottom-bubble-show" : ""}`}>
         <div>
           <div className="setting-header">
             <h3 className="setting-content">
               Settings
-              <i class="fa fa-cog setting-content" aria-hidden="true"></i>
+              <i className="fa fa-cog setting-content" aria-hidden="true"></i>
             </h3>
           </div>
           <form>
