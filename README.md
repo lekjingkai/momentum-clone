@@ -30,12 +30,21 @@ The purpose of this project is to create a clone of the Momentum app with the fo
 Node.js is needed to run the Momentum Clone app.
 
 ## Installing
-Clone the project and use 'npm install' and use 'npm start' to start the server
+Clone the project  
+
+create an .env file at your root folder and enter the follow API keys accordingly:  
+REACT_APP_RAPID_KEY=YOUR API KEY HERE  
+REACT_APP_PEXELS_KEY=YOUR API KEY HERE  
+REACT_APP_OPENWEATHER_KEY=YOUR API KEY HERE  
+  
+Use 'npm install' to install necessary dependancies  
+  
+Use 'npm start' to start the server  
 
 # API used:
-RapidAPI-Pexels  
-RapidAPI-Quotes  
-RapidAPI-OpenWeather  
+RapidAPI-[Pexels](https://rapidapi.com/community/api/open-weather-map)  
+RapidAPI-[Quotes](https://rapidapi.com/martin.svoboda/api/quotes15)  
+RapidAPI-[OpenWeather](https://rapidapi.com/pexels-pexels-default/api/Pexels)  
 
 # Screenshots
 
